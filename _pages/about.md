@@ -34,6 +34,7 @@ Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-20
 - **On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach**. Neural Networks 184:107065 (2025). [arXiv:2212.07056](https://arxiv.org/abs/2212.07056)
 - **Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering**. KDD 2025. [arXiv:2505.20900](https://arxiv.org/abs/2505.20900)
 - **OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System**. CoRR abs/2509.18091 (2025). [arXiv:2509.18091](https://arxiv.org/abs/2509.18091)
+- **A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems**. CoRR abs/2511.21032 (2025). [arXiv:2511.21032](https://arxiv.org/abs/2511.21032)
 
 ### 2024
 - **Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation**. ICML 2024. [arXiv:2402.08845](https://arxiv.org/abs/2402.08845)

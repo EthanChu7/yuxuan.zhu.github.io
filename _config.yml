@@ -23,7 +23,7 @@ repository               : "EthanChu7/yuxuan.zhu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "yuxuan-photo.jpg"
   name             : "Yuxuan Zhu"
   pronouns         : "he/him"
   bio              : "Researcher at Shopee (S&R&A). Recommender systems and causality-inspired ML."
