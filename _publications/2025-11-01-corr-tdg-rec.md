@@ -2,7 +2,6 @@
 title: "A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems"
 collection: publications
 category: manuscripts
-permalink: /publication/2025-corr-tdg-rec
 date: 2025-11-01
 venue: 'CoRR abs/2511.21032 (2025)'
 paperurl: 'https://dblp.org/rec/journals/corr/abs-2511-21032'

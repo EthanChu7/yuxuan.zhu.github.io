@@ -2,7 +2,6 @@
 title: "OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System"
 collection: publications
 category: manuscripts
-permalink: /publication/2025-corr-onepiece
 date: 2025-09-01
 venue: 'CoRR abs/2509.18091 (2025)'
 paperurl: 'https://dblp.org/rec/journals/corr/abs-2509-18091'

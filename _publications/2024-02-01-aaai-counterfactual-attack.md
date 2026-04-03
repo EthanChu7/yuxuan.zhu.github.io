@@ -2,7 +2,6 @@
 title: "Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples"
 collection: publications
 category: conferences
-permalink: /publication/2024-aaai-counterfactual
 date: 2024-02-01
 venue: 'AAAI 2024'
 paperurl: 'https://dblp.org/rec/conf/aaai/CaiZQLLH24'
