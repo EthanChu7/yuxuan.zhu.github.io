@@ -5,10 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
 {% assign current_year = "" %}
@@ -18,7 +14,11 @@ author_profile: true
     <h2>{{ post_year }}</h2><hr />
     {% assign current_year = post_year %}
   {% endif %}
-  {% include archive-single.html %}
+  <p>
+    <a href="{{ base_path }}{{ post.url }}"><strong>{{ post.title }}</strong></a><br />
+    {{ post.venue }}
+    {% if post.paperurl %}
+      | <a href="{{ post.paperurl }}">Paper</a>
+    {% endif %}
+  </p>
 {% endfor %}
-
-
