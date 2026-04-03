@@ -13,18 +13,18 @@ My research focuses on recommender systems and causality-inspired machine learni
 
 Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-2021) at the School of Computer, Guangdong University of Technology.
 
-## Contact
+## Contact 📫
 
 - Email: [iamyuxuanzhu@gmail.com](mailto:iamyuxuanzhu@gmail.com)
 
-## Research Interests
+## Research Interests 🔬
 
-- Recommender Systems
-- Causality-inspired Machine Learning
-- Explainable AI
-- Robustness and Counterfactual Learning
+- Recommender Systems 🎯
+- Causality-inspired Machine Learning 🧠
+- Explainable AI 🧩
+- Robustness and Counterfactual Learning 🛡️
 
-## Selected Publications
+## Selected Publications 📚
 
 ### 2026
 - **Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs**. CoRR abs/2602.02338 (2026). [arXiv:2602.02338](https://arxiv.org/abs/2602.02338)
@@ -40,11 +40,11 @@ Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-20
 - **Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation**. ICML 2024. [arXiv:2402.08845](https://arxiv.org/abs/2402.08845)
 - **Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples**. AAAI 2024. [arXiv:2312.13628](https://arxiv.org/abs/2312.13628)
 
-## Services
+## Services 🤝
 
-- Reviewer: NeurIPS, AAAI, SIGIR, etc.
+- Reviewer: NeurIPS, AAAI, SIGIR, etc. ✅
 
-## Links
+## Links 🔗
 
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ)
 - [OpenReview](https://openreview.net/profile?id=~Yuxuan_Zhu2)
