@@ -37,4 +37,3 @@ Publications
 Service and leadership
 ======
 * Reviewer: NeurIPS, AAAI, SIGIR, etc.
-* Led and supported cross-functional model iteration projects for Shopee Search retrieval and pre-rank pipelines
