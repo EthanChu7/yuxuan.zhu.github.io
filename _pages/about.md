@@ -13,12 +13,36 @@ My research focuses on recommender systems and causality-inspired machine learni
 
 Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-2021) at the School of Computer, Guangdong University of Technology.
 
+## Contact
+
+- Email: [iamyuxuanzhu@gmail.com](mailto:iamyuxuanzhu@gmail.com)
+
 ## Research Interests
 
 - Recommender Systems
 - Causality-inspired Machine Learning
 - Explainable AI
 - Robustness and Counterfactual Learning
+
+## Selected Publications
+
+### 2025
+- **On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach**  
+  *Neural Networks (2025)*  
+  [arXiv:2212.07056](https://arxiv.org/abs/2212.07056)
+
+- **OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System**  
+  *arXiv preprint (2025)*  
+  [arXiv:2509.18091](https://arxiv.org/abs/2509.18091)
+
+### 2024
+- **Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation**  
+  *ICML 2024*  
+  [arXiv:2402.08845](https://arxiv.org/abs/2402.08845)
+
+- **Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples**  
+  *AAAI 2024*  
+  [arXiv:2312.13628](https://arxiv.org/abs/2312.13628)
 
 ## Links
 
