@@ -26,23 +26,22 @@ Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-20
 
 ## Selected Publications
 
-### 2025
-- **On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach**  
-  *Neural Networks (2025)*  
-  [arXiv:2212.07056](https://arxiv.org/abs/2212.07056)
+### 2026
+- **Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs**. CoRR abs/2602.02338 (2026). [arXiv](https://arxiv.org/abs/2602.02338)
+- **ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation**. CoRR abs/2602.20093 (2026). [arXiv](https://arxiv.org/abs/2602.20093)
 
-- **OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System**  
-  *arXiv preprint (2025)*  
-  [arXiv:2509.18091](https://arxiv.org/abs/2509.18091)
+### 2025
+- **On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach**. Neural Networks 184:107065 (2025). [arXiv](https://arxiv.org/abs/2212.07056)
+- **Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering**. KDD 2025. [arXiv](https://arxiv.org/abs/2505.20900)
+- **OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System**. CoRR abs/2509.18091 (2025). [arXiv](https://arxiv.org/abs/2509.18091)
 
 ### 2024
-- **Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation**  
-  *ICML 2024*  
-  [arXiv:2402.08845](https://arxiv.org/abs/2402.08845)
+- **Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation**. ICML 2024. [arXiv](https://arxiv.org/abs/2402.08845)
+- **Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples**. AAAI 2024. [arXiv](https://arxiv.org/abs/2312.13628)
 
-- **Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples**  
-  *AAAI 2024*  
-  [arXiv:2312.13628](https://arxiv.org/abs/2312.13628)
+## Services
+
+- Reviewer: NeurIPS, AAAI, SIGIR, etc.
 
 ## Links
 
