@@ -7,11 +7,26 @@ redirect_from:
   - /about.html
 ---
 
-I am a Researcher at S&R&A, Shopee Pte. Ltd.
+<div class="hero-card">
+  <h1 class="hero-name">Yuxuan Zhu</h1>
+  <p class="hero-title">Research &amp; Machine Learning Engineer</p>
+  <p class="hero-affiliation">S&amp;R&amp;A, Shopee</p>
+  <div class="hero-actions">
+    <a class="hero-btn" href="mailto:iamyuxuanzhu@gmail.com">Email</a>
+    <a class="hero-btn" href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Scholar</a>
+    <a class="hero-btn" href="/yuxuan.zhu.github.io/cv/">CV</a>
+  </div>
+</div>
 
 My research focuses on recommender systems and causality-inspired machine learning, with interests in explainability, robustness, and real-world large-scale recommendation systems.
 
 Previously, I was an M.S. student (2021-2024) and undergraduate student (2017-2021) at the School of Computer, Guangdong University of Technology.
+
+## News 📰
+
+- **Apr 2026:** Homepage and publications page redesigned for clearer structure and mobile readability.
+- **2026:** Two new preprints accepted on arXiv: ReSID (`arXiv:2602.02338`) and ManCAR (`arXiv:2602.20093`).
+- **2025:** KDD paper on deep collaborative filtering published; OnePiece and ELBO-TDS released as arXiv preprints.
 
 ## Contact 📫
 
