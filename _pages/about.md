@@ -13,24 +13,6 @@ My research focuses on recommender systems and causality-inspired machine learni
 
 - Email: [iamyuxuanzhu@gmail.com](mailto:iamyuxuanzhu@gmail.com)
 
-## Education 🎓
-
-- M.S. in Computer Science, Guangdong University of Technology, 2021-2024
-- B.S. in Computer Science, Guangdong University of Technology, 2017-2021
-
-## Work Experience 💼
-
-- 2024-Present: Research & Machine Learning Engineer, Shopee (S&R&A)
-- Model development for retrieval and pre-rank stages of Shopee Search
-- Focus on industrial recommendation modeling, temporal generalization, and production iteration
-
-## Skills 🛠️
-
-- Machine Learning: Recommender Systems, Ranking, Retrieval, Multi-task Learning, Temporal Generalization
-- Modeling: Deep Learning Recommendation Models, Representation Learning, Causal/Counterfactual Methods
-- Engineering: Python, SQL, PyTorch, Large-scale training and inference pipelines
-- Experimentation: Offline evaluation, online A/B testing, iterative production optimization
-
 ## News 📰
 
 - **Apr 2026:** Homepage and publications page redesigned for clearer structure and mobile readability.
@@ -70,3 +52,21 @@ My research focuses on recommender systems and causality-inspired machine learni
 - [OpenReview](https://openreview.net/profile?id=~Yuxuan_Zhu2)
 - [DBLP](https://dblp.org/pid/146/0939-1)
 - [ORCID](https://orcid.org/0000-0003-1831-9688)
+
+## Education 🎓
+
+- M.S. in Computer Science, Guangdong University of Technology, 2021-2024
+- B.S. in Computer Science, Guangdong University of Technology, 2017-2021
+
+## Work Experience 💼
+
+- 2024-Present: Research & Machine Learning Engineer, Shopee (S&R&A)
+- Model development for retrieval and pre-rank stages of Shopee Search
+- Focus on industrial recommendation modeling, temporal generalization, and production iteration
+
+## Skills 🛠️
+
+- Machine Learning: Recommender Systems, Ranking, Retrieval, Multi-task Learning, Temporal Generalization
+- Modeling: Deep Learning Recommendation Models, Representation Learning, Causal/Counterfactual Methods
+- Engineering: Python, SQL, PyTorch, Large-scale training and inference pipelines
+- Experimentation: Offline evaluation, online A/B testing, iterative production optimization
