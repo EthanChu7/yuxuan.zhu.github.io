@@ -295,51 +295,56 @@
 .coauthor-graph {
   border: 0;
   background: transparent;
-  padding: 0;
+  padding: 0.35rem 0;
+  min-height: 560px;
 }
 
 .coauthor-graph svg {
   width: 100%;
-  height: auto;
+  height: 560px;
   display: block;
 }
 
 .coauthor-svg .edge-layer {
   stroke: #8ea3c2;
-  stroke-width: 2;
+  stroke-width: 1.2;
   fill: none;
 }
 
 .coauthor-svg .edge-layer text {
   fill: #6d7f99;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .coauthor-svg .dot-layer circle {
   fill: #5f86bf;
 }
 
+.coauthor-svg text {
+  font-family: var(--global-font-family);
+}
+
 .coauthor-svg .label-layer text {
   fill: #2f4058;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .dark .coauthor-svg .edge-layer {
-  stroke: #7f95b7;
+  stroke: #b3cbef;
 }
 
 .dark .coauthor-svg .edge-layer text {
-  fill: #b7c6e0;
+  fill: #dce8fb;
 }
 
 .dark .coauthor-svg .dot-layer circle {
-  fill: #89a9d9;
+  fill: #c3d8fb;
 }
 
 .dark .coauthor-svg .label-layer text {
-  fill: #d7e1f3;
+  fill: #edf4ff;
 }
 
 @media (max-width: 767px) {
@@ -447,5 +452,21 @@
 
   .modern-pagination .pagination--pager {
     color: #eef3ff !important;
+  }
+
+  .coauthor-graph {
+    min-height: 420px;
+  }
+
+  .coauthor-graph svg {
+    height: 420px;
+  }
+
+  .coauthor-svg .label-layer text {
+    font-size: 18px;
+  }
+
+  .coauthor-svg .edge-layer text {
+    font-size: 13px;
   }
 }
