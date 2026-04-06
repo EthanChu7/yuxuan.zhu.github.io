@@ -89,6 +89,10 @@
   color: var(--global-text-color);
 }
 
+.sidebar .author__meta span + span {
+  margin-left: 0.35rem;
+}
+
 .sidebar .author__urls-wrapper button {
   display: none;
 }
@@ -266,13 +270,38 @@
 }
 
 .modern-pagination .pagination--pager.disabled {
-  opacity: 0.45;
+  opacity: 0.8;
+  color: #5a6678 !important;
+}
+
+.dark .modern-pagination .pagination--pager.disabled {
+  color: #cfd9ef !important;
 }
 
 /* Remove theme horizontal separators for page sections */
 .page__content h2 {
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+.page__share + .pagination,
+.page__meta + .pagination,
+.page__content + .pagination {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 0.6rem !important;
+}
+
+.coauthor-graph {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.coauthor-graph svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (max-width: 767px) {
@@ -332,8 +361,12 @@
 
   .sidebar .author__meta {
     margin-top: 0.32rem;
-    gap: 0.85rem;
+    gap: 1.1rem;
     font-size: 0.8rem;
+  }
+
+  .sidebar .author__meta span + span {
+    margin-left: 0.6rem;
   }
 
   .sidebar .author__urls-wrapper {
@@ -372,5 +405,9 @@
   .page__share .btn {
     width: 1.85rem;
     height: 1.85rem;
+  }
+
+  .modern-pagination .pagination--pager {
+    color: #eef3ff !important;
   }
 }
