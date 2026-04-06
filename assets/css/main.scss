@@ -51,7 +51,68 @@
   word-break: break-word;
 }
 
+/* Unified profile card style (desktop + mobile) */
+.sidebar .author-card {
+  border: 1px solid var(--global-border-color);
+  border-radius: 14px;
+  background: var(--global-bg-color);
+  padding: 0.8rem;
+}
+
+.sidebar .author__avatar img {
+  border-radius: 50%;
+}
+
+.sidebar .author__bio {
+  color: var(--global-text-color);
+}
+
+.sidebar .author__meta {
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.86rem;
+  color: var(--global-text-color);
+}
+
+.sidebar .author__urls-wrapper button {
+  display: none;
+}
+
+.sidebar .author__urls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  position: relative;
+  right: auto;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sidebar .author__urls li {
+  margin: 0;
+}
+
+.sidebar .author__urls li a {
+  display: inline-block;
+  padding: 0.22rem 0.56rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-bg-color);
+  font-size: 0.8rem;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
 @media (max-width: 767px) {
+  .layout--single .sidebar.sticky {
+    margin-top: 0.35rem;
+  }
+
   .sidebar .author-card {
     display: grid;
     grid-template-columns: 82px minmax(0, 1fr);
@@ -59,9 +120,6 @@
     row-gap: 0.55rem;
     align-items: start;
     padding: 0.55rem;
-    border: 1px solid var(--global-border-color);
-    border-radius: 14px;
-    background: var(--global-bg-color);
   }
 
   .sidebar .author__avatar {
@@ -73,7 +131,6 @@
   .sidebar .author__avatar img {
     width: 74px;
     max-width: 74px;
-    border-radius: 50%;
   }
 
   .sidebar .author__content {
@@ -91,16 +148,12 @@
     margin: 0;
     font-size: 0.84rem;
     line-height: 1.35;
-    color: var(--global-text-color-light);
   }
 
   .sidebar .author__meta {
-    margin: 0.32rem 0 0;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 0.32rem;
     gap: 0.55rem;
     font-size: 0.8rem;
-    color: var(--global-text-color-light);
   }
 
   .sidebar .author__urls-wrapper {
@@ -111,16 +164,8 @@
   }
 
   .sidebar .author__urls {
-    display: flex;
-    flex-wrap: wrap;
     gap: 0.38rem;
-    position: relative;
-    right: auto;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
+    margin-top: 0;
   }
 
   .sidebar .author__urls li {
@@ -128,13 +173,7 @@
   }
 
   .sidebar .author__urls li a {
-    display: inline-block;
     padding: 0.2rem 0.52rem;
-    border: 1px solid var(--global-border-color);
-    border-radius: 999px;
-    background: var(--global-bg-color);
     font-size: 0.78rem;
-    text-decoration: none;
-    line-height: 1.2;
   }
 }
