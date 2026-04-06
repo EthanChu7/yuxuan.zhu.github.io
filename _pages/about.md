@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 <section class="content-card">
-  <h2>Biography</h2>
   <p>My research focuses on recommender systems and causality-inspired machine learning, with interests in explainability, robustness, and real-world large-scale recommendation systems.</p>
+  <p><strong>Education:</strong> M.S. in Computer Science, Guangdong University of Technology (2021-2024); B.S. in Computer Science, Guangdong University of Technology (2017-2021).</p>
 </section>
 
 <section class="content-card">
@@ -80,28 +80,22 @@ redirect_from:
 </section>
 
 <section class="content-card">
-  <h2>Education 🎓</h2>
-  <ul>
-    <li>M.S. in Computer Science, Guangdong University of Technology, 2021-2024</li>
-    <li>B.S. in Computer Science, Guangdong University of Technology, 2017-2021</li>
-  </ul>
-</section>
-
-<section class="content-card">
   <h2>Work Experience 💼</h2>
   <ul>
-    <li>2024-Present: Research &amp; Machine Learning Engineer, Shopee (S&amp;R&amp;A)</li>
-    <li>Model development for retrieval and pre-rank stages of Shopee Search</li>
-    <li>Focus on industrial recommendation modeling, temporal generalization, and production iteration</li>
+    <li><strong>Role:</strong> Research &amp; Machine Learning Engineer</li>
+    <li><strong>Company:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</li>
+    <li><strong>Period:</strong> 2024-Present</li>
+    <li><strong>Scope:</strong> Model development for retrieval and pre-rank stages of Shopee Search</li>
+    <li><strong>Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration</li>
   </ul>
 </section>
 
 <section class="content-card">
   <h2>Skills 🛠️</h2>
   <ul>
-    <li>Machine Learning: Recommender Systems, Ranking, Retrieval, Multi-task Learning, Temporal Generalization</li>
-    <li>Modeling: Deep Learning Recommendation Models, Representation Learning, Causal/Counterfactual Methods</li>
-    <li>Engineering: Python, SQL, PyTorch, Large-scale training and inference pipelines</li>
-    <li>Experimentation: Offline evaluation, online A/B testing, iterative production optimization</li>
+    <li><strong>Machine Learning:</strong> Recommender Systems, Ranking, Retrieval, Multi-task Learning, Temporal Generalization</li>
+    <li><strong>Modeling:</strong> Deep Learning Recommendation Models, Representation Learning, Causal/Counterfactual Methods</li>
+    <li><strong>Engineering:</strong> Python, SQL, PyTorch, Large-scale training and inference pipelines</li>
+    <li><strong>Experimentation:</strong> Offline evaluation, online A/B testing, iterative production optimization</li>
   </ul>
 </section>

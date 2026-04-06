@@ -18,7 +18,10 @@ author_profile: true
     <a href="{{ base_path }}{{ post.url }}"><strong>{{ post.title }}</strong></a><br />
     {{ post.venue }}
     {% if post.paperurl %}
-      | <a href="{{ post.paperurl }}">Paper</a>
+      | <a href="{{ post.paperurl }}">paper</a>
+    {% endif %}
+    {% if post.codeurl %}
+      | <a href="{{ post.codeurl }}">code</a>
     {% endif %}
   </p>
 {% endfor %}
