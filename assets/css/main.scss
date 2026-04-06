@@ -131,6 +131,22 @@
   margin-bottom: 0.25rem;
 }
 
+.experience-card {
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  background: var(--global-bg-color);
+  padding: 0.75rem 0.85rem;
+}
+
+.experience-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.experience-card p {
+  margin: 0.2rem 0;
+}
+
 @media (max-width: 767px) {
   .sidebar {
     margin-top: -0.8rem !important;
@@ -152,6 +168,10 @@
   .content-card {
     padding: 0.8rem 0.85rem;
     margin-bottom: 0.75rem;
+  }
+
+  .experience-card {
+    padding: 0.65rem 0.75rem;
   }
 
   .sidebar .author__avatar {

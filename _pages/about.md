@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Biography"
+title: ""
 author_profile: true
 redirect_from:
   - /about/
@@ -82,11 +82,13 @@ redirect_from:
 
 <section class="content-card">
   <h2>Work Experience 💼</h2>
-  <p><strong>Role:</strong> Research &amp; Machine Learning Engineer</p>
-  <p><strong>Organization:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</p>
-  <p><strong>Period:</strong> 2024-Present</p>
-  <p><strong>Responsibilities:</strong> Model development for retrieval and pre-rank stages of Shopee Search.</p>
-  <p><strong>Current Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration.</p>
+  <div class="experience-card">
+    <h3>Research &amp; Machine Learning Engineer</h3>
+    <p><strong>Organization:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</p>
+    <p><strong>Period:</strong> 2024-Present</p>
+    <p><strong>Responsibilities:</strong> Model development for retrieval and pre-rank stages of Shopee Search.</p>
+    <p><strong>Current Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration.</p>
+  </div>
 </section>
 
 <section class="content-card">
