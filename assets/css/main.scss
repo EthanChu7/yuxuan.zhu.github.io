@@ -304,6 +304,44 @@
   display: block;
 }
 
+.coauthor-svg .edge-layer {
+  stroke: #8ea3c2;
+  stroke-width: 2;
+  fill: none;
+}
+
+.coauthor-svg .edge-layer text {
+  fill: #6d7f99;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.coauthor-svg .dot-layer circle {
+  fill: #5f86bf;
+}
+
+.coauthor-svg .label-layer text {
+  fill: #2f4058;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dark .coauthor-svg .edge-layer {
+  stroke: #7f95b7;
+}
+
+.dark .coauthor-svg .edge-layer text {
+  fill: #b7c6e0;
+}
+
+.dark .coauthor-svg .dot-layer circle {
+  fill: #89a9d9;
+}
+
+.dark .coauthor-svg .label-layer text {
+  fill: #d7e1f3;
+}
+
 @media (max-width: 767px) {
   .sidebar {
     margin-top: -0.8rem !important;
