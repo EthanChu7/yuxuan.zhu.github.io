@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 <section class="content-card">
+  <h2>Biography</h2>
   <p>My research focuses on recommender systems and causality-inspired machine learning, with interests in explainability, robustness, and real-world large-scale recommendation systems.</p>
   <p><strong>Education:</strong> M.S. in Computer Science, Guangdong University of Technology (2021-2024); B.S. in Computer Science, Guangdong University of Technology (2017-2021).</p>
 </section>
@@ -81,13 +82,11 @@ redirect_from:
 
 <section class="content-card">
   <h2>Work Experience 💼</h2>
-  <ul>
-    <li><strong>Role:</strong> Research &amp; Machine Learning Engineer</li>
-    <li><strong>Company:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</li>
-    <li><strong>Period:</strong> 2024-Present</li>
-    <li><strong>Scope:</strong> Model development for retrieval and pre-rank stages of Shopee Search</li>
-    <li><strong>Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration</li>
-  </ul>
+  <p><strong>Role:</strong> Research &amp; Machine Learning Engineer</p>
+  <p><strong>Organization:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</p>
+  <p><strong>Period:</strong> 2024-Present</p>
+  <p><strong>Responsibilities:</strong> Model development for retrieval and pre-rank stages of Shopee Search.</p>
+  <p><strong>Current Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration.</p>
 </section>
 
 <section class="content-card">
