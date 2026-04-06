@@ -59,16 +59,16 @@ redirect_from:
 <section class="content-card">
   <h2>Co-authors 🤝</h2>
   <div class="mermaid">
-    graph LR
-      YZ["Yuxuan Zhu"] --- RC["Ruichu Cai"]
-      YZ --- CF["Cong Fu"]
-      YZ --- ZZ["Zhongjin Zhang"]
-      YZ --- YL["Yu Liang"]
-      YZ --- JQ["Jie Qiao"]
-      YZ --- XC["Xuexin Chen"]
-      YZ --- ZL["Zefeng Liang"]
-      YZ --- FL["Furui Liu"]
-      YZ --- ZH["Zhifeng Hao"]
+flowchart LR
+  YZ[Yuxuan Zhu] --- RC[Ruichu Cai]
+  YZ --- CF[Cong Fu]
+  YZ --- ZZ[Zhongjin Zhang]
+  YZ --- YL[Yu Liang]
+  YZ --- JQ[Jie Qiao]
+  YZ --- XC[Xuexin Chen]
+  YZ --- ZL[Zefeng Liang]
+  YZ --- FL[Furui Liu]
+  YZ --- ZH[Zhifeng Hao]
   </div>
 </section>
 

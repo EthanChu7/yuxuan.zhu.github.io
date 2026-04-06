@@ -138,6 +138,8 @@
 .content-card h2 {
   margin-top: 0;
   margin-bottom: 0.45rem;
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .content-card h3 {
@@ -154,16 +156,16 @@
 }
 
 .sun-card {
-  border: 1px solid #f2cf77;
+  border: 1px solid var(--global-border-color);
   border-radius: 10px;
-  background: linear-gradient(180deg, #fffaf0 0%, #fff4dd 100%);
+  background: var(--global-bg-color);
   padding: 0.6rem 0.75rem;
   margin: 0 0 0.5rem;
 }
 
 .dark .sun-card {
-  border-color: #8a6a1f;
-  background: linear-gradient(180deg, #2b2416 0%, #242016 100%);
+  border-color: var(--global-border-color);
+  background: var(--global-bg-color);
 }
 
 .experience-card {
@@ -207,6 +209,8 @@
   gap: 0.45rem;
   align-items: center;
   padding: 0.15rem 0.1rem;
+  border-top: 0 !important;
+  margin-top: 1rem;
 }
 
 .page__share .btn {
@@ -223,6 +227,14 @@
   justify-content: center;
   padding: 0;
   text-decoration: none;
+}
+
+.page__share .btn i,
+.page__share .btn .fab,
+.page__share .btn .fas,
+.page__share .btn .svg-inline--fa {
+  color: var(--global-text-color) !important;
+  opacity: 1;
 }
 
 .page__share .btn:hover {
@@ -252,6 +264,12 @@
 
 .modern-pagination .pagination--pager.disabled {
   opacity: 0.45;
+}
+
+/* Remove theme horizontal separators for page sections */
+.page__content h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media (max-width: 767px) {
