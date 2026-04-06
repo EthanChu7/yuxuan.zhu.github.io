@@ -42,24 +42,34 @@ redirect_from:
   <h2>Selected Publications 📚</h2>
 
   <h3>2026</h3>
-  <ul>
-    <li><strong>Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs</strong>. CoRR abs/2602.02338 (2026). <a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a></li>
-    <li><strong>ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation</strong>. CoRR abs/2602.20093 (2026). <a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a></li>
-  </ul>
+  <div class="sun-card"><strong>Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs</strong>. CoRR abs/2602.02338 (2026). <a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a></div>
+  <div class="sun-card"><strong>ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation</strong>. CoRR abs/2602.20093 (2026). <a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a></div>
 
   <h3>2025</h3>
-  <ul>
-    <li><strong>On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach</strong>. Neural Networks 184:107065 (2025). <a href="https://arxiv.org/abs/2212.07056">arXiv:2212.07056</a></li>
-    <li><strong>Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering</strong>. KDD 2025. <a href="https://arxiv.org/abs/2505.20900">arXiv:2505.20900</a></li>
-    <li><strong>OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System</strong>. CoRR abs/2509.18091 (2025). <a href="https://arxiv.org/abs/2509.18091">arXiv:2509.18091</a></li>
-    <li><strong>A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems</strong>. CoRR abs/2511.21032 (2025). <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a></li>
-  </ul>
+  <div class="sun-card"><strong>On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach</strong>. Neural Networks 184:107065 (2025). <a href="https://arxiv.org/abs/2212.07056">arXiv:2212.07056</a></div>
+  <div class="sun-card"><strong>Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering</strong>. KDD 2025. <a href="https://arxiv.org/abs/2505.20900">arXiv:2505.20900</a></div>
+  <div class="sun-card"><strong>OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System</strong>. CoRR abs/2509.18091 (2025). <a href="https://arxiv.org/abs/2509.18091">arXiv:2509.18091</a></div>
+  <div class="sun-card"><strong>A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems</strong>. CoRR abs/2511.21032 (2025). <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a></div>
 
   <h3>2024</h3>
-  <ul>
-    <li><strong>Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation</strong>. ICML 2024. <a href="https://arxiv.org/abs/2402.08845">arXiv:2402.08845</a></li>
-    <li><strong>Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples</strong>. AAAI 2024. <a href="https://arxiv.org/abs/2312.13628">arXiv:2312.13628</a></li>
-  </ul>
+  <div class="sun-card"><strong>Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation</strong>. ICML 2024. <a href="https://arxiv.org/abs/2402.08845">arXiv:2402.08845</a></div>
+  <div class="sun-card"><strong>Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples</strong>. AAAI 2024. <a href="https://arxiv.org/abs/2312.13628">arXiv:2312.13628</a></div>
+</section>
+
+<section class="content-card">
+  <h2>Co-authors 🤝</h2>
+  <div class="mermaid">
+    graph LR
+      YZ["Yuxuan Zhu"] --- RC["Ruichu Cai"]
+      YZ --- CF["Cong Fu"]
+      YZ --- ZZ["Zhongjin Zhang"]
+      YZ --- YL["Yu Liang"]
+      YZ --- JQ["Jie Qiao"]
+      YZ --- XC["Xuexin Chen"]
+      YZ --- ZL["Zefeng Liang"]
+      YZ --- FL["Furui Liu"]
+      YZ --- ZH["Zhifeng Hao"]
+  </div>
 </section>
 
 <section class="content-card">

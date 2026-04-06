@@ -153,6 +153,19 @@
   padding-left: 0;
 }
 
+.sun-card {
+  border: 1px solid #f2cf77;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fffaf0 0%, #fff4dd 100%);
+  padding: 0.6rem 0.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.dark .sun-card {
+  border-color: #8a6a1f;
+  background: linear-gradient(180deg, #2b2416 0%, #242016 100%);
+}
+
 .experience-card {
   border: 1px solid var(--global-border-color);
   border-radius: 10px;
@@ -193,31 +206,28 @@
   flex-wrap: wrap;
   gap: 0.45rem;
   align-items: center;
-  border: 1px solid var(--global-border-color);
-  border-radius: 12px;
-  background: var(--global-toc-bg-color);
-  padding: 0.7rem 0.8rem;
-}
-
-.page__share .page__share-title {
-  margin: 0;
-  margin-right: 0.35rem;
-  font-size: 0.88rem;
+  padding: 0.15rem 0.1rem;
 }
 
 .page__share .btn {
-  margin: 0;
-  border: 1px solid var(--global-border-color);
+  margin: 0 0.05rem;
+  border: 0;
   border-radius: 999px;
-  background: var(--global-bg-color);
+  background: transparent;
   color: var(--global-text-color);
-  font-size: 0.78rem;
-  padding: 0.2rem 0.55rem;
+  font-size: 1rem;
+  width: 1.95rem;
+  height: 1.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   text-decoration: none;
 }
 
 .page__share .btn:hover {
-  transform: translateY(-1px);
+  background: var(--global-toc-bg-color);
+  transform: translateY(-1px) scale(1.03);
 }
 
 .pagination {
@@ -226,15 +236,21 @@
   margin-top: 1rem;
 }
 
-.pagination .pagination--pager {
-  border: 1px solid var(--global-border-color);
+.modern-pagination .pagination--pager {
+  border: 0;
   border-radius: 999px;
-  background: var(--global-toc-bg-color);
-  padding: 0.3rem 0.8rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f8 100%);
+  color: var(--global-text-color);
+  padding: 0.36rem 0.92rem;
   text-decoration: none;
+  font-weight: 600;
 }
 
-.pagination .pagination--pager.disabled {
+.dark .modern-pagination .pagination--pager {
+  background: linear-gradient(180deg, #2b3342 0%, #222937 100%);
+}
+
+.modern-pagination .pagination--pager.disabled {
   opacity: 0.45;
 }
 
@@ -332,9 +348,8 @@
     padding: 0.6rem 0.65rem;
   }
 
-  .page__share .page__share-title {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 0.1rem;
+  .page__share .btn {
+    width: 1.85rem;
+    height: 1.85rem;
   }
 }
