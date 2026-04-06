@@ -81,7 +81,9 @@
 }
 
 .sidebar .author__urls {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
   position: relative;
   right: auto;
   margin: 0.5rem 0 0;
@@ -96,16 +98,19 @@
 }
 
 .sidebar .author__urls li a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.2rem;
-  padding: 0.08rem 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  font-size: 0.84rem;
+  display: inline-block;
+  padding: 0.2rem 0.52rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-bg-color);
+  font-size: 0.78rem;
   text-decoration: none;
-  line-height: 1.35;
+  line-height: 1.2;
+}
+
+.sidebar .author__urls:before,
+.sidebar .author__urls:after {
+  display: none !important;
 }
 
 /* Homepage content cards */
