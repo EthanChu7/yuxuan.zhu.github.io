@@ -55,7 +55,7 @@
 .sidebar .author-card {
   border: 1px solid var(--global-border-color);
   border-radius: 12px;
-  background: var(--global-bg-color);
+  background: var(--global-toc-bg-color);
   padding: 0.9rem;
 }
 
@@ -108,13 +108,36 @@
   line-height: 1.35;
 }
 
+/* Homepage content cards */
+.content-card {
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  background: var(--global-toc-bg-color);
+  padding: 0.95rem 1rem;
+  margin: 0 0 0.9rem;
+}
+
+.content-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.content-card h3 {
+  margin-top: 0.55rem;
+  margin-bottom: 0.25rem;
+}
+
+.content-card ul {
+  margin-bottom: 0.25rem;
+}
+
 @media (max-width: 767px) {
   .sidebar {
-    margin-top: 0;
+    margin-top: -0.8rem !important;
   }
 
   .layout--single .sidebar.sticky {
-    margin-top: 0;
+    margin-top: -0.8rem !important;
   }
 
   .sidebar .author-card {
@@ -124,6 +147,11 @@
     row-gap: 0.55rem;
     align-items: start;
     padding: 0.55rem;
+  }
+
+  .content-card {
+    padding: 0.8rem 0.85rem;
+    margin-bottom: 0.75rem;
   }
 
   .sidebar .author__avatar {
