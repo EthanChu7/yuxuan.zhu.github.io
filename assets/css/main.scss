@@ -51,6 +51,19 @@
   word-break: break-word;
 }
 
+/* Remove old dot bullets and use cleaner spacing */
+.page__content ul,
+.archive ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.page__content li,
+.archive li {
+  margin: 0.28rem 0;
+}
+
 /* Unified profile card style (desktop + mobile) */
 .sidebar .author-card {
   border: 1px solid var(--global-border-color);
@@ -136,6 +149,10 @@
   margin-bottom: 0.25rem;
 }
 
+.content-card li {
+  padding-left: 0;
+}
+
 .experience-card {
   border: 1px solid var(--global-border-color);
   border-radius: 10px;
@@ -150,6 +167,75 @@
 
 .experience-card p {
   margin: 0.2rem 0;
+}
+
+/* Publications page modern list */
+.publications-list .pub-year {
+  margin-top: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.publications-list .pub-item {
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  background: var(--global-toc-bg-color);
+  padding: 0.7rem 0.85rem;
+  margin: 0 0 0.55rem;
+}
+
+.publications-list .pub-venue {
+  color: var(--global-text-color-light);
+}
+
+/* Modern share + pager on paper detail pages */
+.page__share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  background: var(--global-toc-bg-color);
+  padding: 0.7rem 0.8rem;
+}
+
+.page__share .page__share-title {
+  margin: 0;
+  margin-right: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.page__share .btn {
+  margin: 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  text-decoration: none;
+}
+
+.page__share .btn:hover {
+  transform: translateY(-1px);
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pagination .pagination--pager {
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-toc-bg-color);
+  padding: 0.3rem 0.8rem;
+  text-decoration: none;
+}
+
+.pagination .pagination--pager.disabled {
+  opacity: 0.45;
 }
 
 @media (max-width: 767px) {
@@ -239,5 +325,16 @@
     background: var(--global-bg-color);
     font-size: 0.78rem;
     line-height: 1.2;
+  }
+
+  .page__share {
+    gap: 0.35rem;
+    padding: 0.6rem 0.65rem;
+  }
+
+  .page__share .page__share-title {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.1rem;
   }
 }
