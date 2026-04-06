@@ -59,42 +59,40 @@ redirect_from:
 <section class="content-card">
   <h2>Co-authors 🤝</h2>
   <div class="coauthor-graph">
-    <svg viewBox="0 0 860 460" role="img" aria-label="Co-author network with cooperation counts">
+    <svg viewBox="0 0 760 520" role="img" aria-label="Co-author network with collaboration counts">
       <defs>
-        <linearGradient id="nodeMain" x1="0" x2="1">
-          <stop offset="0%" stop-color="#6fb1ff"/>
-          <stop offset="100%" stop-color="#2c7be5"/>
-        </linearGradient>
-        <linearGradient id="nodeOther" x1="0" x2="1">
-          <stop offset="0%" stop-color="#8ee3cf"/>
-          <stop offset="100%" stop-color="#5bbfa8"/>
-        </linearGradient>
+        <radialGradient id="edgeGlow" cx="50%" cy="50%">
+          <stop offset="0%" stop-color="#77b3ff" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#77b3ff" stop-opacity="0"/>
+        </radialGradient>
       </defs>
 
-      <g stroke="#8fa3bf" stroke-width="2" fill="none" opacity="0.9">
-        <line x1="420" y1="220" x2="180" y2="90"/><text x="292" y="145" fill="#6f7f96" font-size="12">x4</text>
-        <line x1="420" y1="220" x2="190" y2="210"/><text x="300" y="205" fill="#6f7f96" font-size="12">x5</text>
-        <line x1="420" y1="220" x2="190" y2="330"/><text x="300" y="285" fill="#6f7f96" font-size="12">x2</text>
-        <line x1="420" y1="220" x2="380" y2="70"/><text x="392" y="132" fill="#6f7f96" font-size="12">x2</text>
-        <line x1="420" y1="220" x2="380" y2="380"/><text x="392" y="310" fill="#6f7f96" font-size="12">x2</text>
-        <line x1="420" y1="220" x2="650" y2="85"/><text x="545" y="145" fill="#6f7f96" font-size="12">x2</text>
-        <line x1="420" y1="220" x2="665" y2="170"/><text x="545" y="188" fill="#6f7f96" font-size="12">x1</text>
-        <line x1="420" y1="220" x2="665" y2="265"/><text x="545" y="250" fill="#6f7f96" font-size="12">x1</text>
-        <line x1="420" y1="220" x2="650" y2="355"/><text x="545" y="318" fill="#6f7f96" font-size="12">x1</text>
+      <circle cx="380" cy="260" r="170" fill="url(#edgeGlow)"/>
+
+      <g stroke="#8aa4c8" stroke-width="1.8" fill="none" opacity="0.92">
+        <line x1="380" y1="260" x2="380" y2="110"/><text x="380" y="182" text-anchor="middle" fill="#6f7f96" font-size="13">4</text>
+        <line x1="380" y1="260" x2="485" y2="150"/><text x="440" y="196" fill="#6f7f96" font-size="13">5</text>
+        <line x1="380" y1="260" x2="540" y2="220"/><text x="464" y="232" fill="#6f7f96" font-size="13">2</text>
+        <line x1="380" y1="260" x2="540" y2="300"/><text x="464" y="286" fill="#6f7f96" font-size="13">2</text>
+        <line x1="380" y1="260" x2="485" y2="370"/><text x="440" y="330" fill="#6f7f96" font-size="13">2</text>
+        <line x1="380" y1="260" x2="380" y2="410"/><text x="380" y="346" text-anchor="middle" fill="#6f7f96" font-size="13">2</text>
+        <line x1="380" y1="260" x2="275" y2="370"/><text x="320" y="330" fill="#6f7f96" font-size="13">1</text>
+        <line x1="380" y1="260" x2="220" y2="300"/><text x="286" y="286" fill="#6f7f96" font-size="13">1</text>
+        <line x1="380" y1="260" x2="220" y2="220"/><text x="286" y="232" fill="#6f7f96" font-size="13">1</text>
       </g>
 
-      <g>
-        <circle cx="420" cy="220" r="34" fill="url(#nodeMain)"/><text x="420" y="225" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Yuxuan Zhu</text>
+      <g font-family="ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+        <text x="380" y="264" text-anchor="middle" fill="#2c7be5" font-size="20" font-weight="700">Yuxuan Zhu</text>
 
-        <circle cx="180" cy="90" r="20" fill="url(#nodeOther)"/><text x="180" y="95" text-anchor="middle" fill="#133a35" font-size="11">Ruichu Cai</text>
-        <circle cx="190" cy="210" r="20" fill="url(#nodeOther)"/><text x="190" y="215" text-anchor="middle" fill="#133a35" font-size="11">Cong Fu</text>
-        <circle cx="190" cy="330" r="20" fill="url(#nodeOther)"/><text x="190" y="335" text-anchor="middle" fill="#133a35" font-size="11">Zhongjin Zhang</text>
-        <circle cx="380" cy="70" r="20" fill="url(#nodeOther)"/><text x="380" y="75" text-anchor="middle" fill="#133a35" font-size="11">Yu Liang</text>
-        <circle cx="380" cy="380" r="20" fill="url(#nodeOther)"/><text x="380" y="385" text-anchor="middle" fill="#133a35" font-size="11">Jie Qiao</text>
-        <circle cx="650" cy="85" r="20" fill="url(#nodeOther)"/><text x="650" y="90" text-anchor="middle" fill="#133a35" font-size="11">Xuexin Chen</text>
-        <circle cx="665" cy="170" r="20" fill="url(#nodeOther)"/><text x="665" y="175" text-anchor="middle" fill="#133a35" font-size="11">Zefeng Liang</text>
-        <circle cx="665" cy="265" r="20" fill="url(#nodeOther)"/><text x="665" y="270" text-anchor="middle" fill="#133a35" font-size="11">Furui Liu</text>
-        <circle cx="650" cy="355" r="20" fill="url(#nodeOther)"/><text x="650" y="360" text-anchor="middle" fill="#133a35" font-size="11">Zhifeng Hao</text>
+        <text x="380" y="98" text-anchor="middle" fill="#2c3e55" font-size="14">Ruichu Cai</text>
+        <text x="505" y="146" text-anchor="middle" fill="#2c3e55" font-size="14">Cong Fu</text>
+        <text x="560" y="224" text-anchor="middle" fill="#2c3e55" font-size="14">Zhongjin Zhang</text>
+        <text x="560" y="304" text-anchor="middle" fill="#2c3e55" font-size="14">Yu Liang</text>
+        <text x="505" y="382" text-anchor="middle" fill="#2c3e55" font-size="14">Jie Qiao</text>
+        <text x="380" y="426" text-anchor="middle" fill="#2c3e55" font-size="14">Xuexin Chen</text>
+        <text x="255" y="382" text-anchor="middle" fill="#2c3e55" font-size="14">Zefeng Liang</text>
+        <text x="200" y="304" text-anchor="middle" fill="#2c3e55" font-size="14">Furui Liu</text>
+        <text x="200" y="224" text-anchor="middle" fill="#2c3e55" font-size="14">Zhifeng Hao</text>
       </g>
     </svg>
   </div>
