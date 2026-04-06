@@ -52,44 +52,89 @@
 }
 
 @media (max-width: 767px) {
+  .sidebar .author-card {
+    display: grid;
+    grid-template-columns: 82px minmax(0, 1fr);
+    column-gap: 0.75rem;
+    row-gap: 0.55rem;
+    align-items: start;
+    padding: 0.55rem;
+    border: 1px solid #e5e9f2;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+
   .sidebar .author__avatar {
     display: block;
     width: auto;
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
   }
 
   .sidebar .author__avatar img {
-    max-width: 156px;
+    width: 74px;
+    max-width: 74px;
+    border-radius: 14px;
   }
 
   .sidebar .author__content {
-    text-align: center;
+    padding: 0;
+    text-align: left;
+    line-height: 1.25;
+  }
+
+  .sidebar .author__name {
+    margin: 0 0 0.2rem;
+    font-size: 1.02rem;
   }
 
   .sidebar .author__bio {
-    font-size: 0.92rem;
+    margin: 0;
+    font-size: 0.84rem;
     line-height: 1.35;
+    color: #4f5d72;
+  }
+
+  .sidebar .author__meta {
+    margin: 0.32rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    font-size: 0.8rem;
+    color: #5f6b7a;
   }
 
   .sidebar .author__urls-wrapper {
+    grid-column: 1 / -1;
     display: block;
     cursor: default;
-  }
-
-  .sidebar .author__urls-wrapper button {
-    display: none;
+    margin-top: 0.1rem;
   }
 
   .sidebar .author__urls {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem;
     position: relative;
     right: auto;
-    margin-top: 0.4rem;
+    margin: 0;
     padding: 0;
     border: 0;
     background: transparent;
     box-shadow: none;
+  }
+
+  .sidebar .author__urls li {
+    margin: 0;
+  }
+
+  .sidebar .author__urls li a {
+    display: inline-block;
+    padding: 0.2rem 0.52rem;
+    border: 1px solid #d6ddea;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.78rem;
+    text-decoration: none;
+    line-height: 1.2;
   }
 }
