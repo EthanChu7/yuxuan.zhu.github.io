@@ -41,6 +41,10 @@ if (stage && payload) {
     dpr: Math.max(window.devicePixelRatio || 1, 1),
     rotationY: 0,
     rotationX: -0.24,
+    isDragging: false,
+    pointerId: null,
+    lastX: 0,
+    lastY: 0,
   };
 
   const nodes = [{ id: SELF_NAME, count: publications.length, phi: 0, theta: 0 }];
@@ -200,13 +204,50 @@ if (stage && payload) {
     }
   };
 
+  const updateCursor = () => {
+    stage.style.cursor = state.isDragging ? "grabbing" : "grab";
+  };
+
+  const handlePointerDown = (event) => {
+    state.isDragging = true;
+    state.pointerId = event.pointerId;
+    state.lastX = event.clientX;
+    state.lastY = event.clientY;
+    canvas.setPointerCapture(event.pointerId);
+    updateCursor();
+  };
+
+  const handlePointerMove = (event) => {
+    if (!state.isDragging || event.pointerId !== state.pointerId) return;
+    const dx = event.clientX - state.lastX;
+    const dy = event.clientY - state.lastY;
+    state.lastX = event.clientX;
+    state.lastY = event.clientY;
+
+    state.rotationY += dx * 0.008;
+    state.rotationX += dy * 0.005;
+    state.rotationX = Math.max(-0.9, Math.min(0.9, state.rotationX));
+  };
+
+  const handlePointerUp = (event) => {
+    if (state.pointerId !== event.pointerId) return;
+    state.isDragging = false;
+    state.pointerId = null;
+    updateCursor();
+  };
+
   const animate = () => {
-    state.rotationY += 0.0042;
     draw();
     requestAnimationFrame(animate);
   };
 
   resize();
   window.addEventListener("resize", resize);
+  canvas.addEventListener("pointerdown", handlePointerDown);
+  canvas.addEventListener("pointermove", handlePointerMove);
+  canvas.addEventListener("pointerup", handlePointerUp);
+  canvas.addEventListener("pointercancel", handlePointerUp);
+  canvas.addEventListener("pointerleave", handlePointerUp);
+  updateCursor();
   animate();
 }
