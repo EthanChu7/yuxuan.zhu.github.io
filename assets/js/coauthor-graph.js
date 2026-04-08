@@ -182,8 +182,8 @@ if (stage && payload) {
     ctx.shadowBlur = 0;
     others.forEach((entry) => {
       ctx.fillStyle = palette.text;
-      const baseSize = window.innerWidth < 768 ? 14 : 18;
-      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 1.1 : 1.35), window.innerWidth < 768 ? 5 : 7);
+      const baseSize = window.innerWidth < 768 ? 13 : 17;
+      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 0.9 : 1.1), window.innerWidth < 768 ? 4 : 6);
       ctx.font = `400 ${Math.round(baseSize * entry.scale + bonusSize)}px ${fontFamily}`;
       ctx.textAlign = entry.x >= 0 ? "left" : "right";
       const offset = entry.x >= 0 ? 10 : -10;
@@ -191,7 +191,7 @@ if (stage && payload) {
     });
 
     ctx.fillStyle = palette.center;
-    ctx.font = `400 ${window.innerWidth < 768 ? 18 : 24}px ${fontFamily}`;
+    ctx.font = `400 ${window.innerWidth < 768 ? 17 : 22}px ${fontFamily}`;
     ctx.textAlign = "center";
     ctx.shadowColor = palette.shadow;
     ctx.shadowBlur = 10;

@@ -21,13 +21,7 @@
     if (!icon) return;
 
     const applyThemeIcon = () => {
-      const darkMode =
-        document.documentElement.classList.contains("dark") ||
-        document.documentElement.getAttribute("data-theme") === "dark";
-
-      icon.className = darkMode
-        ? "fa-solid fa-circle-half-stroke"
-        : "fa-solid fa-moon";
+      icon.className = "fa-solid fa-circle-half-stroke";
     };
 
     applyThemeIcon();
