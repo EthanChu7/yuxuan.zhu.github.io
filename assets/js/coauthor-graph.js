@@ -66,24 +66,22 @@ if (stage && payload) {
     const dark = document.documentElement.classList.contains("dark");
     return dark
       ? {
-          glow: "rgba(123, 181, 255, 0.18)",
-          edge: "rgba(201, 223, 255, 0.34)",
-          edgeText: "#dfeaff",
-          dot: "#d7e6ff",
-          text: "#f4f8ff",
-          center: "#f4f8ff",
-          shadow: "rgba(10, 18, 32, 0.34)",
-          hint: "#cad6eb",
+          glow: "rgba(66, 153, 225, 0.18)",
+          edge: "rgba(133, 197, 255, 0.28)",
+          edgeText: "rgba(214, 233, 255, 0.88)",
+          dot: "#7dd3fc",
+          text: "#edf6ff",
+          center: "#edf6ff",
+          shadow: "rgba(8, 16, 30, 0.28)",
         }
       : {
-          glow: "rgba(120, 183, 255, 0.16)",
-          edge: "rgba(93, 129, 182, 0.26)",
-          edgeText: "#5f7391",
-          dot: "#5b82ba",
-          text: "#2f4058",
-          center: "#2f4058",
-          shadow: "rgba(120, 150, 200, 0.16)",
-          hint: "#667992",
+          glow: "rgba(56, 189, 248, 0.14)",
+          edge: "rgba(71, 117, 173, 0.2)",
+          edgeText: "rgba(78, 99, 129, 0.84)",
+          dot: "#2563eb",
+          text: "#23324a",
+          center: "#23324a",
+          shadow: "rgba(148, 163, 184, 0.14)",
         };
   };
 
@@ -152,8 +150,8 @@ if (stage && payload) {
     ctx.translate(centerX, centerY);
 
     ctx.lineCap = "round";
-    ctx.lineWidth = 0.9;
-    ctx.font = `400 ${window.innerWidth < 768 ? 12 : 14}px ${fontFamily}`;
+    ctx.lineWidth = 0.75;
+    ctx.font = `400 ${window.innerWidth < 768 ? 11 : 13}px ${fontFamily}`;
 
     others.forEach((entry) => {
       ctx.strokeStyle = palette.edge;
@@ -184,7 +182,9 @@ if (stage && payload) {
     ctx.shadowBlur = 0;
     others.forEach((entry) => {
       ctx.fillStyle = palette.text;
-      ctx.font = `400 ${Math.round((window.innerWidth < 768 ? 14 : 18) * entry.scale)}px ${fontFamily}`;
+      const baseSize = window.innerWidth < 768 ? 14 : 18;
+      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 1.1 : 1.35), window.innerWidth < 768 ? 5 : 7);
+      ctx.font = `400 ${Math.round(baseSize * entry.scale + bonusSize)}px ${fontFamily}`;
       ctx.textAlign = entry.x >= 0 ? "left" : "right";
       const offset = entry.x >= 0 ? 10 : -10;
       ctx.fillText(entry.node.id, entry.x + offset, entry.y + 5);
@@ -198,10 +198,6 @@ if (stage && payload) {
     ctx.fillText(SELF_NAME, centerNode.x, centerNode.y + 26);
     ctx.restore();
 
-    const hint = stage.nextElementSibling;
-    if (hint && hint.classList.contains("coauthor-graph__hint")) {
-      hint.style.color = palette.hint;
-    }
   };
 
   const updateCursor = () => {
@@ -219,13 +215,16 @@ if (stage && payload) {
 
   const handlePointerMove = (event) => {
     if (!state.isDragging || event.pointerId !== state.pointerId) return;
+    event.preventDefault();
     const dx = event.clientX - state.lastX;
     const dy = event.clientY - state.lastY;
     state.lastX = event.clientX;
     state.lastY = event.clientY;
 
-    state.rotationY += dx * 0.008;
-    state.rotationX += dy * 0.005;
+    const xSensitivity = window.innerWidth < 768 ? 0.016 : 0.009;
+    const ySensitivity = window.innerWidth < 768 ? 0.011 : 0.006;
+    state.rotationY += dx * xSensitivity;
+    state.rotationX += dy * ySensitivity;
     state.rotationX = Math.max(-0.9, Math.min(0.9, state.rotationX));
   };
 

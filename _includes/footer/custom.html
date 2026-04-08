@@ -15,4 +15,37 @@
 
 <script type="module" src="{{ base_path }}/assets/js/coauthor-graph.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+
+    const applyThemeIcon = () => {
+      const darkMode =
+        document.documentElement.classList.contains("dark") ||
+        document.documentElement.getAttribute("data-theme") === "dark";
+
+      icon.className = darkMode
+        ? "fa-solid fa-circle-half-stroke"
+        : "fa-solid fa-moon";
+    };
+
+    applyThemeIcon();
+
+    const observer = new MutationObserver(applyThemeIcon);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class", "data-theme"],
+    });
+
+    const toggle = document.getElementById("theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        requestAnimationFrame(applyThemeIcon);
+        setTimeout(applyThemeIcon, 50);
+      });
+    }
+  });
+</script>
+
 <!-- end custom footer snippets -->
