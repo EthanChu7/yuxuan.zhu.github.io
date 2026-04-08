@@ -60,7 +60,7 @@ redirect_from:
   <h2>Co-authors 🤝</h2>
   <div class="coauthor-graph">
     <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
-    <p class="coauthor-graph__hint">Drag to move, scroll to zoom, drag a name to reposition it.</p>
+    <p class="coauthor-graph__hint">Auto-updated from publications and rendered as a rotating collaboration sphere.</p>
     <script id="coauthor-graph-data" type="application/json">
       [
       {% for post in site.publications %}

@@ -308,18 +308,13 @@
 .coauthor-graph__stage {
   position: relative;
   width: 100%;
-  min-height: 620px;
+  min-height: 700px;
   border-radius: 18px;
   background:
     radial-gradient(circle at 50% 50%, rgba(120, 183, 255, 0.12), transparent 45%),
     radial-gradient(circle at 20% 20%, rgba(120, 183, 255, 0.08), transparent 25%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
   overflow: hidden;
-  cursor: grab;
-}
-
-.coauthor-graph__stage:active {
-  cursor: grabbing;
 }
 
 .coauthor-graph__canvas {
@@ -500,7 +495,7 @@
   }
 
   .coauthor-graph__stage {
-    min-height: 360px;
+    min-height: 420px;
   }
 
   .coauthor-svg .label-layer text {
