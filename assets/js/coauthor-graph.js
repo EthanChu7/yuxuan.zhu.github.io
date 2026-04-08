@@ -88,7 +88,7 @@ if (stage && payload) {
   const resize = () => {
     const rect = stage.getBoundingClientRect();
     state.width = Math.max(Math.round(rect.width), 320);
-    state.height = window.innerWidth < 768 ? 420 : 700;
+    state.height = window.innerWidth < 768 ? 380 : 660;
     canvas.width = state.width * state.dpr;
     canvas.height = state.height * state.dpr;
     canvas.style.width = `${state.width}px`;
@@ -101,7 +101,10 @@ if (stage && payload) {
       return { x: 0, y: 0, z: 1.1, scale: 1.08 };
     }
 
-    const radius = 182 + Math.min(node.count * 16, 40);
+    const radiusBase = window.innerWidth < 768 ? 146 : 170;
+    const radiusBoost = window.innerWidth < 768 ? 10 : 14;
+    const radiusCap = window.innerWidth < 768 ? 26 : 34;
+    const radius = radiusBase + Math.min(node.count * radiusBoost, radiusCap);
     const sx = Math.sin(node.phi) * Math.cos(node.theta);
     const sy = Math.cos(node.phi);
     const sz = Math.sin(node.phi) * Math.sin(node.theta);
@@ -150,8 +153,8 @@ if (stage && payload) {
     ctx.translate(centerX, centerY);
 
     ctx.lineCap = "round";
-    ctx.lineWidth = 0.75;
-    ctx.font = `400 ${window.innerWidth < 768 ? 11 : 13}px ${fontFamily}`;
+    ctx.lineWidth = 0.72;
+    ctx.font = `400 ${window.innerWidth < 768 ? 10 : 12}px ${fontFamily}`;
 
     others.forEach((entry) => {
       ctx.strokeStyle = palette.edge;
@@ -182,8 +185,8 @@ if (stage && payload) {
     ctx.shadowBlur = 0;
     others.forEach((entry) => {
       ctx.fillStyle = palette.text;
-      const baseSize = window.innerWidth < 768 ? 13 : 17;
-      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 0.9 : 1.1), window.innerWidth < 768 ? 4 : 6);
+      const baseSize = window.innerWidth < 768 ? 12 : 16;
+      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 0.72 : 0.95), window.innerWidth < 768 ? 3 : 5);
       ctx.font = `400 ${Math.round(baseSize * entry.scale + bonusSize)}px ${fontFamily}`;
       ctx.textAlign = entry.x >= 0 ? "left" : "right";
       const offset = entry.x >= 0 ? 10 : -10;
@@ -191,7 +194,7 @@ if (stage && payload) {
     });
 
     ctx.fillStyle = palette.center;
-    ctx.font = `400 ${window.innerWidth < 768 ? 17 : 22}px ${fontFamily}`;
+    ctx.font = `400 ${window.innerWidth < 768 ? 15 : 20}px ${fontFamily}`;
     ctx.textAlign = "center";
     ctx.shadowColor = palette.shadow;
     ctx.shadowBlur = 10;
