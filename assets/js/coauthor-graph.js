@@ -162,12 +162,6 @@ if (stage && payload) {
       ctx.moveTo(centerNode.x, centerNode.y);
       ctx.lineTo(entry.x, entry.y);
       ctx.stroke();
-
-      const labelT = 0.55;
-      const lx = centerNode.x + (entry.x - centerNode.x) * labelT;
-      const ly = centerNode.y + (entry.y - centerNode.y) * labelT;
-      ctx.fillStyle = palette.edgeText;
-      ctx.fillText(String(entry.node.count), lx + 6, ly - 4);
     });
 
     others.forEach((entry) => {
@@ -187,10 +181,23 @@ if (stage && payload) {
       ctx.fillStyle = palette.text;
       const baseSize = window.innerWidth < 768 ? 12 : 16;
       const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 0.72 : 0.95), window.innerWidth < 768 ? 3 : 5);
-      ctx.font = `400 ${Math.round(baseSize * entry.scale + bonusSize)}px ${fontFamily}`;
+      const nameSize = Math.round(baseSize * entry.scale + bonusSize);
+      const supSize = Math.max(10, Math.round(nameSize * 0.58));
+      const baselineY = entry.y + 5;
+      ctx.font = `400 ${nameSize}px ${fontFamily}`;
       ctx.textAlign = entry.x >= 0 ? "left" : "right";
       const offset = entry.x >= 0 ? 10 : -10;
-      ctx.fillText(entry.node.id, entry.x + offset, entry.y + 5);
+      const labelX = entry.x + offset;
+      ctx.fillText(entry.node.id, labelX, baselineY);
+
+      const nameWidth = ctx.measureText(entry.node.id).width;
+      ctx.font = `400 ${supSize}px ${fontFamily}`;
+      ctx.fillStyle = palette.edgeText;
+      if (entry.x >= 0) {
+        ctx.fillText(String(entry.node.count), labelX + nameWidth + 2, baselineY - nameSize * 0.45);
+      } else {
+        ctx.fillText(String(entry.node.count), labelX - nameWidth - 2, baselineY - nameSize * 0.45);
+      }
     });
 
     ctx.fillStyle = palette.center;
