@@ -59,53 +59,19 @@ redirect_from:
 <section class="content-card">
   <h2>Co-authors 🤝</h2>
   <div class="coauthor-graph">
-    <svg class="coauthor-svg" viewBox="0 0 900 620" role="img" aria-label="Co-author network with collaboration counts">
-      <defs>
-        <radialGradient id="coGlow" cx="50%" cy="50%">
-          <stop offset="0%" stop-color="#7cb8ff" stop-opacity="0.22"/>
-          <stop offset="100%" stop-color="#7cb8ff" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <circle cx="450" cy="310" r="180" fill="url(#coGlow)"/>
-
-      <g class="edge-layer">
-        <line x1="450" y1="310" x2="450" y2="150"/><text x="468" y="225">4</text>
-        <line x1="450" y1="310" x2="570" y2="195"/><text x="535" y="240">5</text>
-        <line x1="450" y1="310" x2="610" y2="275"/><text x="555" y="300">2</text>
-        <line x1="450" y1="310" x2="610" y2="355"/><text x="555" y="350">2</text>
-        <line x1="450" y1="310" x2="570" y2="430"/><text x="530" y="392">2</text>
-        <line x1="450" y1="310" x2="450" y2="470"/><text x="470" y="400">2</text>
-        <line x1="450" y1="310" x2="330" y2="430"/><text x="380" y="392">1</text>
-        <line x1="450" y1="310" x2="290" y2="355"/><text x="350" y="350">1</text>
-        <line x1="450" y1="310" x2="290" y2="275"/><text x="350" y="300">1</text>
-      </g>
-
-      <g class="dot-layer">
-        <circle cx="450" cy="310" r="4.5"/>
-        <circle cx="450" cy="150" r="4.5"/>
-        <circle cx="570" cy="195" r="4.5"/>
-        <circle cx="610" cy="275" r="4.5"/>
-        <circle cx="610" cy="355" r="4.5"/>
-        <circle cx="570" cy="430" r="4.5"/>
-        <circle cx="450" cy="470" r="4.5"/>
-        <circle cx="330" cy="430" r="4.5"/>
-        <circle cx="290" cy="355" r="4.5"/>
-        <circle cx="290" cy="275" r="4.5"/>
-      </g>
-
-      <g class="label-layer">
-        <text x="450" y="332" text-anchor="middle">Yuxuan Zhu</text>
-        <text x="450" y="130" text-anchor="middle">Ruichu Cai</text>
-        <text x="592" y="190" text-anchor="start">Cong Fu</text>
-        <text x="630" y="280" text-anchor="start">Zhongjin Zhang</text>
-        <text x="630" y="360" text-anchor="start">Yu Liang</text>
-        <text x="592" y="442" text-anchor="start">Jie Qiao</text>
-        <text x="450" y="494" text-anchor="middle">Xuexin Chen</text>
-        <text x="308" y="442" text-anchor="end">Zefeng Liang</text>
-        <text x="268" y="360" text-anchor="end">Furui Liu</text>
-        <text x="268" y="280" text-anchor="end">Zhifeng Hao</text>
-      </g>
-    </svg>
+    <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
+    <p class="coauthor-graph__hint">Drag to move, scroll to zoom, drag a name to reposition it.</p>
+    <script id="coauthor-graph-data" type="application/json">
+      [
+      {% for post in site.publications %}
+        {
+          "title": {{ post.title | jsonify }},
+          "citation": {{ post.citation | strip_html | jsonify }},
+          "url": {{ post.url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      ]
+    </script>
   </div>
 </section>
 
