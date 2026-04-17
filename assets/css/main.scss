@@ -916,10 +916,6 @@ html[data-theme="dark"] .sidebar .author-card {
   margin-top: 1rem;
 }
 
-.sidebar {
-  margin-top: 0 !important;
-}
-
 .archive,
 .page {
   padding-top: 0;
@@ -1263,11 +1259,18 @@ html[data-theme="dark"] .paper-header-card {
   border-top: 1px solid var(--site-border);
   background: var(--site-page-bg);
   position: static;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  min-height: 0;
 }
 
 .page__footer footer {
   color: var(--site-muted);
+  background: var(--site-page-bg);
+  margin-top: 0;
+  padding-top: 0.75rem;
+}
+
+.page__footer-copyright {
   background: var(--site-page-bg);
 }
 
@@ -1426,7 +1429,7 @@ html[data-theme="dark"] .paper-header-card {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1180px) {
+@media (min-width: 768px) and (max-width: 1366px) {
   #main {
     display: grid;
     grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
@@ -1446,12 +1449,14 @@ html[data-theme="dark"] .paper-header-card {
     padding-top: 0 !important;
     margin: 0 !important;
     align-self: start;
+    transform: none !important;
   }
 
   .page,
   .archive {
     float: none !important;
     width: 100% !important;
+    max-width: none !important;
     margin: 0 !important;
     padding-top: 0 !important;
   }
@@ -1511,9 +1516,34 @@ html[data-theme="dark"] .paper-header-card {
   }
 }
 
-@media (min-width: 1181px) {
+@media (min-width: 1367px) {
+  #main {
+    display: grid;
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
   .sidebar {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    position: sticky !important;
+    top: calc(70px + 1rem);
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+    align-self: start;
+    transform: none !important;
+  }
+
+  .page,
+  .archive {
+    float: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
   }
 }
