@@ -7,7 +7,6 @@ redirect_from:
 ---
 
 <section class="content-card intro-card">
-  <p class="section-kicker">Biography</p>
   <h2>Researching recommendation systems that hold up in the real world.</h2>
   <p class="intro-lead">I work on recommender systems and causality-inspired machine learning, with a focus on explainability, robustness, and large-scale industrial recommendation.</p>
   <p>I am currently a <strong>Research &amp; Machine Learning Engineer</strong> at <strong>Shopee</strong>, where I work on model development for the retrieval and pre-rank stages of Shopee Search. Before that, I completed both my <strong>M.S.</strong> and <strong>B.S.</strong> in Computer Science at <strong>Guangdong University of Technology</strong>.</p>
@@ -15,7 +14,6 @@ redirect_from:
 
 <section class="split-grid">
   <article class="content-card compact-card">
-    <p class="section-kicker">Contact</p>
     <h2>Reach me</h2>
     <div class="info-stack">
       <div class="info-row"><span>Email</span><a href="mailto:iamyuxuanzhu@gmail.com">iamyuxuanzhu@gmail.com</a></div>
@@ -25,7 +23,6 @@ redirect_from:
   </article>
 
   <article class="content-card compact-card">
-    <p class="section-kicker">Research</p>
     <h2>Current interests</h2>
     <div class="tag-cloud">
       <span>Recommender Systems</span>
@@ -40,10 +37,7 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div>
-      <p class="section-kicker">Updates</p>
-      <h2>News</h2>
-    </div>
+    <div><h2>News</h2></div>
   </div>
   <div class="timeline-list">
     <article class="timeline-item">
@@ -63,10 +57,7 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div>
-      <p class="section-kicker">Highlights</p>
-      <h2>Selected publications</h2>
-    </div>
+    <div><h2>Selected publications</h2></div>
     <a class="section-link" href="/yuxuan.zhu.github.io/publications/">View all publications</a>
   </div>
 
@@ -132,10 +123,7 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div>
-      <p class="section-kicker">Network</p>
-      <h2>Co-authors</h2>
-    </div>
+    <div><h2>Co-authors</h2></div>
   </div>
   <div class="coauthor-graph">
     <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
@@ -155,7 +143,6 @@ redirect_from:
 
 <section class="split-grid split-grid--bottom">
   <article class="content-card">
-    <p class="section-kicker">Experience</p>
     <h2>Work experience</h2>
     <div class="experience-card">
       <p class="experience-role">Research &amp; Machine Learning Engineer</p>
@@ -166,7 +153,6 @@ redirect_from:
   </article>
 
   <article class="content-card">
-    <p class="section-kicker">Service</p>
     <h2>Academic service</h2>
     <div class="service-panel">
       <p><strong>Reviewer</strong></p>
@@ -177,7 +163,6 @@ redirect_from:
 
 <section class="split-grid split-grid--bottom">
   <article class="content-card">
-    <p class="section-kicker">Links</p>
     <h2>Profiles</h2>
     <div class="link-list-modern">
       <a href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Google Scholar</a>
@@ -188,7 +173,6 @@ redirect_from:
   </article>
 
   <article class="content-card">
-    <p class="section-kicker">Toolkit</p>
     <h2>Skills</h2>
     <div class="info-stack">
       <div class="info-row"><span>Machine Learning</span><strong>Recommender systems, ranking, retrieval, multi-task learning</strong></div>

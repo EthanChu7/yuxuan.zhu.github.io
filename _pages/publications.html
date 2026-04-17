@@ -9,7 +9,6 @@ hide_title: true
 {% include base_path %}
 
 <section class="archive-intro">
-  <p class="section-kicker">Research output</p>
   <h1 class="archive-display-title">Publications</h1>
   <p>A year-organized list of papers across recommendation, causal machine learning, explainability, and robustness. Each entry links to the paper page, with paper and code links where available.</p>
 </section>
@@ -19,7 +18,6 @@ hide_title: true
   {% for year in pubs_by_year %}
     <section class="pub-year-section">
       <div class="pub-year-header">
-        <p class="section-kicker">Year</p>
         <h2 class="pub-year">{{ year.name }}</h2>
       </div>
       <div class="pub-year-grid">
