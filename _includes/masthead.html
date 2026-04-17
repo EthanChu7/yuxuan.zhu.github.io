@@ -5,13 +5,7 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-brand" href="{{ base_path }}/" aria-label="{{ site.title }}">
           <span class="site-brand__title">{{ site.title }}</span>
-          {% if site.author.title %}
-            <span class="site-brand__subtitle">{{ site.author.title }}</span>
-          {% endif %}
         </a>
-        <button type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav-links">
-          <span class="navicon"></span>
-        </button>
         <ul id="site-nav-links" class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -29,7 +23,6 @@
             </a>
           </li>
         </ul>
-        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
