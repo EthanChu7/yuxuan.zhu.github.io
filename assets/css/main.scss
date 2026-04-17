@@ -608,9 +608,9 @@ a {
 }
 
 html[data-theme="dark"] .masthead {
-  background: rgba(11, 18, 31, 0.98);
-  border-bottom-color: rgba(111, 138, 183, 0.18);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+  background: #0d1422;
+  border-bottom-color: rgba(148, 163, 184, 0.16);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
 }
 
 .masthead__inner-wrap {
@@ -635,7 +635,7 @@ html[data-theme="dark"] .masthead {
 }
 
 html[data-theme="dark"] .masthead .visible-links > li > a {
-  color: #a5b5cf;
+  color: #b8c4d8;
 }
 
 html[data-theme="dark"] .masthead .visible-links > li.selected > a,
@@ -699,7 +699,7 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
-  border-radius: 12px;
+  border-radius: 999px;
   border: 1px solid var(--site-border);
   background: var(--site-card-strong);
   text-decoration: none !important;
@@ -712,6 +712,7 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
 
 #theme-toggle #theme-icon {
   color: var(--site-ink);
+  opacity: 1;
 }
 
 .theme-toggle__button:hover,
@@ -734,13 +735,17 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
 }
 
 html[data-theme="dark"] .theme-toggle__button {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(125, 211, 252, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(148, 163, 184, 0.2);
 }
 
 html[data-theme="dark"] .theme-toggle__button:hover {
-  background: rgba(125, 211, 252, 0.08);
-  border-color: rgba(125, 211, 252, 0.22);
+  background: rgba(125, 211, 252, 0.1);
+  border-color: rgba(125, 211, 252, 0.24);
+}
+
+html[data-theme="dark"] #theme-toggle #theme-icon {
+  color: #f3f7ff;
 }
 
 .sidebar .author-card,
@@ -1173,6 +1178,13 @@ html[data-theme="dark"] .paper-header-card {
   margin-bottom: 0.65rem;
 }
 
+.paper-authors {
+  margin: -0.1rem 0 0.55rem;
+  color: var(--site-muted);
+  font-size: 0.95rem;
+  line-height: 1.58;
+}
+
 .paper-venue-line,
 .paper-header-card .page__meta,
 .paper-header-card .page__date {
@@ -1180,28 +1192,8 @@ html[data-theme="dark"] .paper-header-card {
   font-size: 0.92rem;
 }
 
-.paper-meta-card {
-  margin-top: 1.2rem;
-  padding: 1rem 1.05rem;
-  border: 1px solid var(--site-border);
-  border-radius: 18px;
-  background: var(--site-card);
-}
-
-.paper-meta-label {
-  margin: 0 0 0.45rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--site-accent);
-}
-
-.paper-citation {
-  margin: 0 0 0.7rem;
-  color: var(--site-muted);
-  font-size: 0.9rem;
-  line-height: 1.65;
+.paper-action-links {
+  margin-top: 0.8rem;
 }
 
 .page__content > h2,
