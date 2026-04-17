@@ -41,10 +41,6 @@ redirect_from:
   </div>
   <div class="timeline-list">
     <article class="timeline-item">
-      <span class="timeline-date">Apr 2026</span>
-      <p>Redesigned this homepage and publication archive for a cleaner reading experience across desktop and mobile.</p>
-    </article>
-    <article class="timeline-item">
       <span class="timeline-date">2026</span>
       <p>Released two new arXiv preprints: <strong>ReSID</strong> (<a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a>) and <strong>ManCAR</strong> (<a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>).</p>
     </article>
@@ -161,24 +157,12 @@ redirect_from:
   </article>
 </section>
 
-<section class="split-grid split-grid--bottom">
-  <article class="content-card">
-    <h2>Links</h2>
-    <div class="link-list-modern">
-      <a href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Google Scholar</a>
-      <a href="https://openreview.net/profile?id=~Yuxuan_Zhu2">OpenReview</a>
-      <a href="https://dblp.org/pid/146/0939-1">DBLP</a>
-      <a href="https://orcid.org/0000-0003-1831-9688">ORCID</a>
-    </div>
-  </article>
-
-  <article class="content-card">
-    <h2>Skills</h2>
-    <div class="info-stack">
-      <div class="info-row"><span>Machine Learning</span><strong>Recommender systems, ranking, retrieval, multi-task learning</strong></div>
-      <div class="info-row"><span>Modeling</span><strong>Deep recommendation models, representation learning, causal and counterfactual methods</strong></div>
-      <div class="info-row"><span>Engineering</span><strong>Python, SQL, PyTorch, large-scale training and inference pipelines</strong></div>
-      <div class="info-row"><span>Experimentation</span><strong>Offline evaluation, online A/B testing, iterative production optimization</strong></div>
-    </div>
-  </article>
+<section class="content-card">
+  <h2>Skills</h2>
+  <div class="info-stack">
+    <div class="info-row"><span>Machine Learning</span><strong>Recommender systems, ranking, retrieval, multi-task learning</strong></div>
+    <div class="info-row"><span>Modeling</span><strong>Deep recommendation models, representation learning, causal and counterfactual methods</strong></div>
+    <div class="info-row"><span>Engineering</span><strong>Python, SQL, PyTorch, large-scale training and inference pipelines</strong></div>
+    <div class="info-row"><span>Experimentation</span><strong>Offline evaluation, online A/B testing, iterative production optimization</strong></div>
+  </div>
 </section>
