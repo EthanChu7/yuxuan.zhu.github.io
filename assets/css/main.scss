@@ -563,6 +563,7 @@ html[data-theme="dark"] .coauthor-graph__stage {
   --site-border: rgba(108, 128, 160, 0.16);
   --site-card: rgba(255, 255, 255, 0.8);
   --site-card-strong: rgba(255, 255, 255, 0.94);
+  --site-page-bg: #f7f8fb;
 }
 
 html[data-theme="dark"] {
@@ -573,6 +574,7 @@ html[data-theme="dark"] {
   --site-border: rgba(151, 174, 214, 0.16);
   --site-card: rgba(13, 21, 36, 0.76);
   --site-card-strong: rgba(15, 24, 40, 0.92);
+  --site-page-bg: #0b1018;
 }
 
 html,
@@ -581,12 +583,12 @@ body {
 }
 
 body {
-  background: #f7f8fb;
+  background: var(--site-page-bg);
   color: var(--site-ink);
 }
 
 html[data-theme="dark"] body {
-  background: #0b1018;
+  background: var(--site-page-bg);
 }
 
 a {
@@ -879,14 +881,14 @@ html[data-theme="dark"] .sidebar .author-card {
   align-items: center;
   justify-content: center;
   gap: 0.42rem;
-  padding: 0.22rem 0.62rem;
+  padding: 0.12rem 0.56rem;
   border: 1px solid var(--site-border);
   border-radius: 999px;
   background: var(--site-card-strong);
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--site-ink);
-  min-height: 1.9rem;
+  min-height: 1.55rem;
   line-height: 1.2;
 }
 
@@ -910,11 +912,12 @@ html[data-theme="dark"] .sidebar .author-card {
 
 #main {
   max-width: 1320px;
+  margin-top: 1rem;
 }
 
 .archive,
 .page {
-  padding-top: 0.3rem;
+  padding-top: 0;
 }
 
 .page__inner-wrap {
@@ -1253,11 +1256,12 @@ html[data-theme="dark"] .paper-header-card {
 
 .page__footer {
   border-top: 1px solid var(--site-border);
-  background: transparent;
+  background: var(--site-page-bg);
 }
 
 .page__footer footer {
   color: var(--site-muted);
+  background: var(--site-page-bg);
 }
 
 @media (max-width: 1060px) {
@@ -1441,6 +1445,8 @@ html[data-theme="dark"] .paper-header-card {
   }
 
   .sidebar .author-card {
+    width: 100%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 110px minmax(0, 1fr);
     column-gap: 1rem;
@@ -1481,13 +1487,21 @@ html[data-theme="dark"] .paper-header-card {
     width: auto;
     max-width: 100%;
     white-space: nowrap;
-    padding: 0.2rem 0.56rem;
+    padding: 0.1rem 0.5rem;
     font-size: 0.75rem;
+    min-height: 1.45rem;
   }
 
   .author-link-icon {
     width: 0.95rem;
     height: 0.95rem;
     flex: 0 0 0.95rem;
+  }
+}
+
+@media (min-width: 1181px) {
+  .sidebar {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
