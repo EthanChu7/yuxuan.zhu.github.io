@@ -30,9 +30,10 @@
       attributeFilter: ["class", "data-theme"],
     });
 
-    const toggle = document.getElementById("theme-toggle");
+    const toggle = document.querySelector("#theme-toggle .theme-toggle__button");
     if (toggle) {
-      toggle.addEventListener("click", function () {
+      toggle.addEventListener("click", function (event) {
+        event.preventDefault();
         requestAnimationFrame(applyThemeIcon);
         setTimeout(applyThemeIcon, 50);
       });
