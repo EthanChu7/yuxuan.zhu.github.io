@@ -24,7 +24,11 @@ layout: default
     {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
+      {% assign has_page_header = false %}
+      {% if page.title or page.citation or page.read_time or page.modified or page.venue or page.date or page.paperurl or page.codeurl or page.slidesurl or page.bibtexurl %}
+        {% assign has_page_header = true %}
+      {% endif %}
+      {% unless page.header.overlay_color or page.header.overlay_image or has_page_header == false %}
         <header class="paper-header-card">
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.citation %}<p class="paper-authors">{{ page.citation | split: ". (" | first }}</p>{% endif %}
