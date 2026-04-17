@@ -114,6 +114,26 @@ redirect_from:
         <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a>
       </div>
     </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2024</span>
+      <h3>Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation</h3>
+      <p>ICML 2024</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2402.08845">arXiv:2402.08845</a>
+        <a href="https://github.com/DMIRLAB-Group/FANS">code</a>
+      </div>
+    </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2024</span>
+      <h3>Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples</h3>
+      <p>AAAI 2024</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2312.13628">arXiv:2312.13628</a>
+        <a href="https://github.com/EthanChu7/CADE">code</a>
+      </div>
+    </article>
   </div>
 </section>
 
