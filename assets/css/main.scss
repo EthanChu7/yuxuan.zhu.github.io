@@ -585,6 +585,7 @@ body {
 body {
   background: var(--site-page-bg);
   color: var(--site-ink);
+  padding-bottom: 0;
 }
 
 html[data-theme="dark"] body {
@@ -881,14 +882,14 @@ html[data-theme="dark"] .sidebar .author-card {
   align-items: center;
   justify-content: center;
   gap: 0.42rem;
-  padding: 0.12rem 0.56rem;
+  padding: 0.08rem 0.5rem;
   border: 1px solid var(--site-border);
   border-radius: 999px;
   background: var(--site-card-strong);
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--site-ink);
-  min-height: 1.55rem;
+  min-height: 1.35rem;
   line-height: 1.2;
 }
 
@@ -913,6 +914,10 @@ html[data-theme="dark"] .sidebar .author-card {
 #main {
   max-width: 1320px;
   margin-top: 1rem;
+}
+
+.sidebar {
+  margin-top: 0 !important;
 }
 
 .archive,
@@ -1257,6 +1262,8 @@ html[data-theme="dark"] .paper-header-card {
 .page__footer {
   border-top: 1px solid var(--site-border);
   background: var(--site-page-bg);
+  position: static;
+  margin-top: 1.5rem;
 }
 
 .page__footer footer {
@@ -1421,25 +1428,30 @@ html[data-theme="dark"] .paper-header-card {
 
 @media (min-width: 768px) and (max-width: 1180px) {
   #main {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
   }
 
   .sidebar,
   .layout--single .sidebar.sticky {
-    position: static !important;
+    position: sticky !important;
+    top: calc(70px + 1rem);
     float: none !important;
-    width: auto !important;
-    max-width: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
     overflow: visible !important;
     padding-top: 0 !important;
-    margin: 0 0 1rem !important;
+    margin: 0 !important;
+    align-self: start;
   }
 
   .page,
   .archive {
     float: none !important;
-    width: auto !important;
+    width: 100% !important;
     margin: 0 !important;
     padding-top: 0 !important;
   }
@@ -1487,9 +1499,9 @@ html[data-theme="dark"] .paper-header-card {
     width: auto;
     max-width: 100%;
     white-space: nowrap;
-    padding: 0.1rem 0.5rem;
+    padding: 0.08rem 0.46rem;
     font-size: 0.75rem;
-    min-height: 1.45rem;
+    min-height: 1.28rem;
   }
 
   .author-link-icon {
