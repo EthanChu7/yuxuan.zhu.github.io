@@ -54,7 +54,7 @@ redirect_from:
 <section class="content-card">
   <div class="section-heading">
     <div><h2>Selected publications</h2></div>
-    <a class="section-link" href="/yuxuan.zhu.github.io/publications/">View all publications</a>
+    <a class="section-link" href="{{ '/publications/' | relative_url }}">View all publications</a>
   </div>
 
   <div class="publication-grid">
