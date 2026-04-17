@@ -527,24 +527,26 @@ html[data-theme="dark"] .coauthor-graph__stage {
 
 /* 2026 visual redesign */
 :root {
-  --site-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", "Noto Sans", sans-serif;
+  --site-sans: "Avenir Next", "IBM Plex Sans", "Segoe UI", "Helvetica Neue", "Noto Sans", sans-serif;
   --site-accent: #2563eb;
-  --site-accent-soft: rgba(37, 99, 235, 0.12);
-  --site-ink: #152033;
-  --site-muted: #5f6f86;
-  --site-border: rgba(108, 128, 160, 0.16);
-  --site-card: rgba(255, 255, 255, 0.8);
-  --site-card-strong: rgba(255, 255, 255, 0.94);
+  --site-accent-soft: rgba(37, 99, 235, 0.1);
+  --site-ink: #111b2e;
+  --site-muted: #63748d;
+  --site-border: rgba(100, 122, 156, 0.18);
+  --site-card: rgba(255, 255, 255, 0.92);
+  --site-card-strong: rgba(255, 255, 255, 0.98);
+  --site-grid: rgba(37, 99, 235, 0.06);
 }
 
 html[data-theme="dark"] {
   --site-accent: #7dd3fc;
   --site-accent-soft: rgba(125, 211, 252, 0.12);
   --site-ink: #edf4ff;
-  --site-muted: #aab8cf;
-  --site-border: rgba(151, 174, 214, 0.16);
-  --site-card: rgba(13, 21, 36, 0.76);
-  --site-card-strong: rgba(15, 24, 40, 0.92);
+  --site-muted: #9cafc9;
+  --site-border: rgba(142, 166, 209, 0.16);
+  --site-card: rgba(11, 18, 31, 0.92);
+  --site-card-strong: rgba(15, 23, 40, 0.98);
+  --site-grid: rgba(125, 211, 252, 0.08);
 }
 
 html,
@@ -554,17 +556,21 @@ body {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.07), transparent 24%),
-    radial-gradient(circle at 85% 12%, rgba(59, 130, 246, 0.06), transparent 18%),
-    linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(241, 245, 252, 0.98));
+    linear-gradient(var(--site-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--site-grid) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.06), transparent 22%),
+    linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(243, 247, 252, 0.98));
+  background-size: 24px 24px, 24px 24px, auto, auto;
   color: var(--site-ink);
 }
 
 html[data-theme="dark"] body {
   background:
-    radial-gradient(circle at top left, rgba(34, 211, 238, 0.08), transparent 24%),
-    radial-gradient(circle at 85% 12%, rgba(56, 189, 248, 0.08), transparent 18%),
-    linear-gradient(180deg, rgba(9, 15, 27, 0.98), rgba(8, 13, 23, 0.98));
+    linear-gradient(var(--site-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--site-grid) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.06), transparent 22%),
+    linear-gradient(180deg, rgba(8, 13, 24, 0.98), rgba(7, 11, 21, 0.98));
+  background-size: 24px 24px, 24px 24px, auto, auto;
 }
 
 a {
@@ -574,15 +580,15 @@ a {
 
 .masthead {
   backdrop-filter: none;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.98);
   border-bottom: 1px solid var(--site-border);
-  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
 }
 
 html[data-theme="dark"] .masthead {
-  background: rgba(10, 16, 28, 0.96);
-  border-bottom-color: rgba(151, 174, 214, 0.12);
-  box-shadow: inset 0 -1px 0 rgba(151, 174, 214, 0.08);
+  background: rgba(9, 15, 27, 0.985);
+  border-bottom-color: rgba(151, 174, 214, 0.14);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
 }
 
 .masthead__inner-wrap {
@@ -592,9 +598,10 @@ html[data-theme="dark"] .masthead {
 }
 
 .masthead .visible-links > li > a {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--site-muted);
   padding-top: 0.95rem;
   padding-bottom: 0.95rem;
@@ -624,7 +631,8 @@ html[data-theme="dark"] .masthead {
 .masthead__menu-item--lg a {
   color: var(--site-ink);
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 #site-nav {
@@ -648,7 +656,7 @@ html[data-theme="dark"] .masthead {
 
 .greedy-nav .hidden-links {
   border: 1px solid var(--site-border);
-  border-radius: 18px;
+  border-radius: 14px;
   background: var(--site-card-strong);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
   overflow: hidden;
@@ -685,7 +693,7 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
 .pub-card {
   border: 1px solid var(--site-border);
   background: var(--site-card);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
 }
 
 html[data-theme="dark"] .sidebar .author-card,
@@ -698,17 +706,17 @@ html[data-theme="dark"] .pub-card {
 }
 
 .sidebar .author-card {
-  border-radius: 24px;
-  padding: 1.15rem;
+  border-radius: 18px;
+  padding: 1.05rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 34%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 251, 255, 0.94)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.04), transparent 34%);
 }
 
 html[data-theme="dark"] .sidebar .author-card {
   background:
-    linear-gradient(180deg, rgba(16, 24, 39, 0.9), rgba(12, 18, 31, 0.82)),
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 34%);
+    linear-gradient(180deg, rgba(13, 21, 36, 0.98), rgba(10, 17, 30, 0.96)),
+    linear-gradient(135deg, rgba(125, 211, 252, 0.06), transparent 36%);
 }
 
 .sidebar .author__avatar {
@@ -716,16 +724,16 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .sidebar .author__avatar img {
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  border: 1px solid var(--site-border);
 }
 
 .sidebar .author__eyebrow,
 .section-kicker {
   margin: 0 0 0.35rem;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--site-accent);
 }
@@ -738,7 +746,7 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .sidebar .author__name {
-  font-size: 1.55rem;
+  font-size: 1.48rem;
   margin: 0 0 0.18rem;
 }
 
@@ -777,8 +785,8 @@ html[data-theme="dark"] .sidebar .author-card {
   padding: 0.42rem 0.72rem;
   border: 1px solid var(--site-border);
   border-radius: 999px;
-  background: var(--site-card-strong);
-  font-size: 0.78rem;
+  background: transparent;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--site-ink);
 }
@@ -807,14 +815,14 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .content-card {
-  border-radius: 24px;
-  padding: 1.35rem 1.4rem;
+  border-radius: 18px;
+  padding: 1.25rem 1.3rem;
   margin-bottom: 1rem;
 }
 
 .content-card h2 {
-  font-size: 1.45rem;
-  margin-bottom: 0.9rem;
+  font-size: 1.34rem;
+  margin-bottom: 0.82rem;
 }
 
 .split-grid {
@@ -829,16 +837,35 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .intro-card h2 {
-  font-size: clamp(1.8rem, 4vw, 2.75rem);
-  line-height: 1.06;
-  max-width: 12ch;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.02;
+  max-width: 13ch;
 }
 
 .intro-lead {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  max-width: 58rem;
+  font-size: 1.04rem;
+  line-height: 1.72;
+  max-width: 54rem;
   color: var(--site-ink);
+}
+
+.intro-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.06), transparent 26%),
+    radial-gradient(circle at 100% 0, rgba(37, 99, 235, 0.08), transparent 24%);
+  pointer-events: none;
+}
+
+.intro-card > * {
+  position: relative;
 }
 
 .compact-card h2 {
@@ -858,7 +885,7 @@ html[data-theme="dark"] .sidebar .author-card {
   align-items: center;
   padding: 0.45rem 0.78rem;
   border-radius: 999px;
-  background: var(--site-card-strong);
+  background: transparent;
   border: 1px solid var(--site-border);
   color: var(--site-ink);
   font-size: 0.84rem;
@@ -908,9 +935,9 @@ html[data-theme="dark"] .sidebar .author-card {
   padding: 0.42rem 0.75rem;
   border-radius: 999px;
   border: 1px solid var(--site-border);
-  background: var(--site-card-strong);
+  background: transparent;
   color: var(--site-ink);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -925,7 +952,7 @@ html[data-theme="dark"] .sidebar .author-card {
   grid-template-columns: 92px 1fr;
   gap: 1rem;
   align-items: start;
-  padding: 0.85rem 0;
+  padding: 0.9rem 0;
   border-top: 1px solid var(--site-border);
 }
 
@@ -958,20 +985,20 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .pub-card {
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 1rem 1rem 0.95rem;
 }
 
 .pub-card--featured {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 251, 255, 0.85)),
-    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 28%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.95)),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent 32%);
 }
 
 html[data-theme="dark"] .pub-card--featured {
   background:
-    linear-gradient(180deg, rgba(16, 24, 39, 0.95), rgba(14, 21, 35, 0.84)),
-    radial-gradient(circle at top right, rgba(125, 211, 252, 0.08), transparent 28%);
+    linear-gradient(180deg, rgba(13, 21, 36, 0.99), rgba(12, 19, 33, 0.96)),
+    linear-gradient(135deg, rgba(125, 211, 252, 0.06), transparent 34%);
 }
 
 .pub-year-badge {
@@ -999,12 +1026,12 @@ html[data-theme="dark"] .pub-card--featured {
 }
 
 .service-panel {
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 1rem;
 }
 
 .experience-card {
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 1rem;
 }
 
@@ -1061,7 +1088,7 @@ html[data-theme="dark"] .pub-card--featured {
 }
 
 .publications-list .pub-item {
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 1rem;
 }
 
@@ -1128,13 +1155,13 @@ html[data-theme="dark"] .pub-card--featured {
   .sidebar .author-card {
     grid-template-columns: 72px minmax(0, 1fr);
     padding: 0.8rem;
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
   .sidebar .author__avatar img {
     width: 72px;
     max-width: 72px;
-    border-radius: 50%;
+    border-radius: 16px;
   }
 
   .sidebar .author__name {
@@ -1161,7 +1188,7 @@ html[data-theme="dark"] .pub-card--featured {
 
   .content-card {
     padding: 1rem;
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
   .content-card h2 {
