@@ -879,14 +879,14 @@ html[data-theme="dark"] .sidebar .author-card {
   align-items: center;
   justify-content: center;
   gap: 0.42rem;
-  padding: 0.32rem 0.68rem;
+  padding: 0.22rem 0.62rem;
   border: 1px solid var(--site-border);
   border-radius: 999px;
   background: var(--site-card-strong);
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--site-ink);
-  min-height: 2.2rem;
+  min-height: 1.9rem;
   line-height: 1.2;
 }
 
@@ -1481,7 +1481,7 @@ html[data-theme="dark"] .paper-header-card {
     width: auto;
     max-width: 100%;
     white-space: nowrap;
-    padding: 0.28rem 0.62rem;
+    padding: 0.2rem 0.56rem;
     font-size: 0.75rem;
   }
 
