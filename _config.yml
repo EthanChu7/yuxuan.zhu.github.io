@@ -25,6 +25,7 @@ author:
   # Biographic information
   avatar           : "yuxuan-photo-v2.jpg"
   name             : "Yuxuan Zhu"
+  title            : "Research & Machine Learning Engineer"
   pronouns         : "he/him"
   bio              : "Researcher at Shopee (S&R&A). Recommender systems and causality-inspired ML."
   location         : "Shanghai"
@@ -35,6 +36,8 @@ author:
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ"
+  openreview       : "https://openreview.net/profile?id=~Yuxuan_Zhu2"
+  dblp             : "https://dblp.org/pid/146/0939-1"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0003-1831-9688"

@@ -6,58 +6,137 @@ redirect_from:
   - /about.html
 ---
 
-<section class="content-card">
-  <h2>Biography</h2>
-  <p>My research focuses on recommender systems and causality-inspired machine learning, with interests in explainability, robustness, and real-world large-scale recommendation systems.</p>
-  <p><strong>Education:</strong> M.S. in Computer Science, Guangdong University of Technology (2021-2024); B.S. in Computer Science, Guangdong University of Technology (2017-2021).</p>
+<section class="content-card intro-card">
+  <p class="section-kicker">Biography</p>
+  <h2>Researching recommendation systems that hold up in the real world.</h2>
+  <p class="intro-lead">I work on recommender systems and causality-inspired machine learning, with a focus on explainability, robustness, and large-scale industrial recommendation.</p>
+  <p>I am currently a <strong>Research &amp; Machine Learning Engineer</strong> at <strong>Shopee</strong>, where I work on model development for the retrieval and pre-rank stages of Shopee Search. Before that, I completed both my <strong>M.S.</strong> and <strong>B.S.</strong> in Computer Science at <strong>Guangdong University of Technology</strong>.</p>
+</section>
+
+<section class="split-grid">
+  <article class="content-card compact-card">
+    <p class="section-kicker">Contact</p>
+    <h2>Reach me</h2>
+    <div class="info-stack">
+      <div class="info-row"><span>Email</span><a href="mailto:iamyuxuanzhu@gmail.com">iamyuxuanzhu@gmail.com</a></div>
+      <div class="info-row"><span>Location</span><strong>Shanghai, China</strong></div>
+      <div class="info-row"><span>Affiliation</span><strong>Shopee Search</strong></div>
+    </div>
+  </article>
+
+  <article class="content-card compact-card">
+    <p class="section-kicker">Research</p>
+    <h2>Current interests</h2>
+    <div class="tag-cloud">
+      <span>Recommender Systems</span>
+      <span>Causal Machine Learning</span>
+      <span>Explainable AI</span>
+      <span>Counterfactual Learning</span>
+      <span>Robust Modeling</span>
+      <span>Industrial Ranking</span>
+    </div>
+  </article>
 </section>
 
 <section class="content-card">
-  <h2>Contact 📫</h2>
-  <ul>
-    <li>Email: <a href="mailto:iamyuxuanzhu@gmail.com">iamyuxuanzhu@gmail.com</a></li>
-  </ul>
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">Updates</p>
+      <h2>News</h2>
+    </div>
+  </div>
+  <div class="timeline-list">
+    <article class="timeline-item">
+      <span class="timeline-date">Apr 2026</span>
+      <p>Redesigned this homepage and publication archive for a cleaner reading experience across desktop and mobile.</p>
+    </article>
+    <article class="timeline-item">
+      <span class="timeline-date">2026</span>
+      <p>Released two new arXiv preprints: <strong>ReSID</strong> (<a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a>) and <strong>ManCAR</strong> (<a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>).</p>
+    </article>
+    <article class="timeline-item">
+      <span class="timeline-date">2025</span>
+      <p>Published a KDD paper on deep collaborative filtering and released new industry-scale recommendation preprints including <strong>OnePiece</strong> and <strong>ELBO-TDS</strong>.</p>
+    </article>
+  </div>
 </section>
 
 <section class="content-card">
-  <h2>News 📰</h2>
-  <ul>
-    <li><strong>Apr 2026:</strong> Homepage and publications page redesigned for clearer structure and mobile readability.</li>
-    <li><strong>2026:</strong> Two new preprints accepted on arXiv: ReSID (<code>arXiv:2602.02338</code>) and ManCAR (<code>arXiv:2602.20093</code>).</li>
-    <li><strong>2025:</strong> KDD paper on deep collaborative filtering published; OnePiece and ELBO-TDS released as arXiv preprints.</li>
-  </ul>
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">Highlights</p>
+      <h2>Selected publications</h2>
+    </div>
+    <a class="section-link" href="/yuxuan.zhu.github.io/publications/">View all publications</a>
+  </div>
+
+  <div class="publication-grid">
+    <article class="pub-card pub-card--featured">
+      <span class="pub-year-badge">2026</span>
+      <h3>Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs</h3>
+      <p>CoRR abs/2602.02338</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a>
+        <a href="https://github.com/FuCongResearchSquad/ReSID">code</a>
+      </div>
+    </article>
+
+    <article class="pub-card pub-card--featured">
+      <span class="pub-year-badge">2026</span>
+      <h3>ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation</h3>
+      <p>CoRR abs/2602.20093</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>
+      </div>
+    </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2025</span>
+      <h3>On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach</h3>
+      <p>Neural Networks 184:107065</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2212.07056">arXiv:2212.07056</a>
+        <a href="https://github.com/EthanChu7/NSEG">code</a>
+      </div>
+    </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2025</span>
+      <h3>Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering</h3>
+      <p>KDD 2025</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2505.20900">arXiv:2505.20900</a>
+        <a href="https://github.com/FuCongResearchSquad/GNOLR">code</a>
+      </div>
+    </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2025</span>
+      <h3>OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System</h3>
+      <p>CoRR abs/2509.18091</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2509.18091">arXiv:2509.18091</a>
+      </div>
+    </article>
+
+    <article class="pub-card">
+      <span class="pub-year-badge">2025</span>
+      <h3>A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems</h3>
+      <p>CoRR abs/2511.21032</p>
+      <div class="pub-links-inline">
+        <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a>
+      </div>
+    </article>
+  </div>
 </section>
 
 <section class="content-card">
-  <h2>Research Interests 🔬</h2>
-  <ul>
-    <li>Recommender Systems 🎯</li>
-    <li>Causality-inspired Machine Learning 🧠</li>
-    <li>Explainable AI 🧩</li>
-    <li>Robustness and Counterfactual Learning 🛡️</li>
-  </ul>
-</section>
-
-<section class="content-card">
-  <h2>Selected Publications 📚</h2>
-
-  <h3>2026</h3>
-  <div class="sun-card"><strong>Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs</strong>. CoRR abs/2602.02338 (2026). <a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a></div>
-  <div class="sun-card"><strong>ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation</strong>. CoRR abs/2602.20093 (2026). <a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a></div>
-
-  <h3>2025</h3>
-  <div class="sun-card"><strong>On the probability of necessity and sufficiency of explaining Graph Neural Networks: A lower bound optimization approach</strong>. Neural Networks 184:107065 (2025). <a href="https://arxiv.org/abs/2212.07056">arXiv:2212.07056</a></div>
-  <div class="sun-card"><strong>Embed Progressive Implicit Preference in Unified Space for Deep Collaborative Filtering</strong>. KDD 2025. <a href="https://arxiv.org/abs/2505.20900">arXiv:2505.20900</a></div>
-  <div class="sun-card"><strong>OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System</strong>. CoRR abs/2509.18091 (2025). <a href="https://arxiv.org/abs/2509.18091">arXiv:2509.18091</a></div>
-  <div class="sun-card"><strong>A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems</strong>. CoRR abs/2511.21032 (2025). <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a></div>
-
-  <h3>2024</h3>
-  <div class="sun-card"><strong>Feature Attribution with Necessity and Sufficiency via Dual-stage Perturbation Test for Causal Explanation</strong>. ICML 2024. <a href="https://arxiv.org/abs/2402.08845">arXiv:2402.08845</a></div>
-  <div class="sun-card"><strong>Where and How to Attack? A Causality-Inspired Recipe for Generating Counterfactual Adversarial Examples</strong>. AAAI 2024. <a href="https://arxiv.org/abs/2312.13628">arXiv:2312.13628</a></div>
-</section>
-
-<section class="content-card">
-  <h2>Co-authors 🤝</h2>
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">Network</p>
+      <h2>Co-authors</h2>
+    </div>
+  </div>
   <div class="coauthor-graph">
     <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
     <script id="coauthor-graph-data" type="application/json">
@@ -74,40 +153,48 @@ redirect_from:
   </div>
 </section>
 
-<section class="content-card">
-  <h2>Services 🤝</h2>
-  <ul>
-    <li>Reviewer: NeurIPS, AAAI, SIGIR, etc. ✅</li>
-  </ul>
+<section class="split-grid split-grid--bottom">
+  <article class="content-card">
+    <p class="section-kicker">Experience</p>
+    <h2>Work experience</h2>
+    <div class="experience-card">
+      <p class="experience-role">Research &amp; Machine Learning Engineer</p>
+      <p class="experience-org">Shopee, Search, Recommendation &amp; Ads</p>
+      <p class="experience-period">2024 - Present</p>
+      <p>Working on model development for the retrieval and pre-rank stages of Shopee Search, with emphasis on industrial recommendation modeling, temporal generalization, and production iteration.</p>
+    </div>
+  </article>
+
+  <article class="content-card">
+    <p class="section-kicker">Service</p>
+    <h2>Academic service</h2>
+    <div class="service-panel">
+      <p><strong>Reviewer</strong></p>
+      <p>NeurIPS, AAAI, SIGIR, and related venues.</p>
+    </div>
+  </article>
 </section>
 
-<section class="content-card">
-  <h2>Links 🔗</h2>
-  <ul>
-    <li><a href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Google Scholar</a></li>
-    <li><a href="https://openreview.net/profile?id=~Yuxuan_Zhu2">OpenReview</a></li>
-    <li><a href="https://dblp.org/pid/146/0939-1">DBLP</a></li>
-    <li><a href="https://orcid.org/0000-0003-1831-9688">ORCID</a></li>
-  </ul>
-</section>
+<section class="split-grid split-grid--bottom">
+  <article class="content-card">
+    <p class="section-kicker">Links</p>
+    <h2>Profiles</h2>
+    <div class="link-list-modern">
+      <a href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Google Scholar</a>
+      <a href="https://openreview.net/profile?id=~Yuxuan_Zhu2">OpenReview</a>
+      <a href="https://dblp.org/pid/146/0939-1">DBLP</a>
+      <a href="https://orcid.org/0000-0003-1831-9688">ORCID</a>
+    </div>
+  </article>
 
-<section class="content-card">
-  <h2>Work Experience 💼</h2>
-  <div class="experience-card">
-    <h3>Research &amp; Machine Learning Engineer</h3>
-    <p><strong>Organization:</strong> Shopee, Search, Recommendation &amp; Ads (S&amp;R&amp;A)</p>
-    <p><strong>Period:</strong> 2024-Present</p>
-    <p><strong>Responsibilities:</strong> Model development for retrieval and pre-rank stages of Shopee Search.</p>
-    <p><strong>Current Focus:</strong> Industrial recommendation modeling, temporal generalization, and production iteration.</p>
-  </div>
-</section>
-
-<section class="content-card">
-  <h2>Skills 🛠️</h2>
-  <ul>
-    <li><strong>Machine Learning:</strong> Recommender Systems, Ranking, Retrieval, Multi-task Learning, Temporal Generalization</li>
-    <li><strong>Modeling:</strong> Deep Learning Recommendation Models, Representation Learning, Causal/Counterfactual Methods</li>
-    <li><strong>Engineering:</strong> Python, SQL, PyTorch, Large-scale training and inference pipelines</li>
-    <li><strong>Experimentation:</strong> Offline evaluation, online A/B testing, iterative production optimization</li>
-  </ul>
+  <article class="content-card">
+    <p class="section-kicker">Toolkit</p>
+    <h2>Skills</h2>
+    <div class="info-stack">
+      <div class="info-row"><span>Machine Learning</span><strong>Recommender systems, ranking, retrieval, multi-task learning</strong></div>
+      <div class="info-row"><span>Modeling</span><strong>Deep recommendation models, representation learning, causal and counterfactual methods</strong></div>
+      <div class="info-row"><span>Engineering</span><strong>Python, SQL, PyTorch, large-scale training and inference pipelines</strong></div>
+      <div class="info-row"><span>Experimentation</span><strong>Offline evaluation, online A/B testing, iterative production optimization</strong></div>
+    </div>
+  </article>
 </section>
