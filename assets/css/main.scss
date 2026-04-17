@@ -378,11 +378,28 @@ html[data-theme="dark"] .coauthor-graph__stage {
 
 @media (max-width: 767px) {
   .sidebar {
-    margin-top: -0.8rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0.4rem !important;
+    min-height: 0 !important;
   }
 
   .layout--single .sidebar.sticky {
-    margin-top: -0.8rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0.4rem !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  #main > .sidebar + .page,
+  #main > .sidebar + .archive {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .sidebar > *:last-child {
+    margin-bottom: 0 !important;
   }
 
   .sidebar .author-card {
@@ -392,6 +409,7 @@ html[data-theme="dark"] .coauthor-graph__stage {
     row-gap: 0.55rem;
     align-items: start;
     padding: 0.55rem;
+    margin-bottom: 0 !important;
   }
 
   .content-card {
