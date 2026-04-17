@@ -7,14 +7,14 @@ redirect_from:
 ---
 
 <section class="content-card intro-card">
-  <h2>Researching recommendation systems that hold up in the real world.</h2>
+  <h2>Biography</h2>
   <p class="intro-lead">I work on recommender systems and causality-inspired machine learning, with a focus on explainability, robustness, and large-scale industrial recommendation.</p>
   <p>I am currently a <strong>Research &amp; Machine Learning Engineer</strong> at <strong>Shopee</strong>, where I work on model development for the retrieval and pre-rank stages of Shopee Search. Before that, I completed both my <strong>M.S.</strong> and <strong>B.S.</strong> in Computer Science at <strong>Guangdong University of Technology</strong>.</p>
 </section>
 
 <section class="split-grid">
   <article class="content-card compact-card">
-    <h2>Reach me</h2>
+    <h2>Contact</h2>
     <div class="info-stack">
       <div class="info-row"><span>Email</span><a href="mailto:iamyuxuanzhu@gmail.com">iamyuxuanzhu@gmail.com</a></div>
       <div class="info-row"><span>Location</span><strong>Shanghai, China</strong></div>
@@ -23,7 +23,7 @@ redirect_from:
   </article>
 
   <article class="content-card compact-card">
-    <h2>Current interests</h2>
+    <h2>Research Interests</h2>
     <div class="tag-cloud">
       <span>Recommender Systems</span>
       <span>Causal Machine Learning</span>
@@ -163,7 +163,7 @@ redirect_from:
 
 <section class="split-grid split-grid--bottom">
   <article class="content-card">
-    <h2>Profiles</h2>
+    <h2>Links</h2>
     <div class="link-list-modern">
       <a href="https://scholar.google.com/citations?hl=en&user=iqf_6DYAAAAJ">Google Scholar</a>
       <a href="https://openreview.net/profile?id=~Yuxuan_Zhu2">OpenReview</a>
