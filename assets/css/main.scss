@@ -649,18 +649,10 @@ html[data-theme="dark"] .masthead .visible-links > li > a:hover {
 
 .masthead .visible-links > li.selected > a {
   position: relative;
-  border-bottom: 0 !important;
-  padding-bottom: 0.95rem !important;
 }
 
 .masthead .visible-links > li.selected > a::after {
   display: none;
-}
-
-.masthead__menu-item.selected a,
-.masthead__menu-item.selected a:hover {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
 }
 
 .masthead__menu-item--lg a {
@@ -733,11 +725,10 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
   -webkit-tap-highlight-color: transparent;
   appearance: none;
   cursor: pointer;
-  color: var(--site-ink);
 }
 
 #theme-toggle #theme-icon {
-  color: currentColor;
+  color: var(--site-ink);
   opacity: 1;
   font-size: 0.95rem;
 }
@@ -764,7 +755,6 @@ html[data-theme="dark"] .greedy-nav .hidden-links {
 html[data-theme="dark"] .theme-toggle__button {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(148, 163, 184, 0.16);
-  color: #f3f7ff;
 }
 
 html[data-theme="dark"] .theme-toggle__button:hover {
@@ -774,10 +764,6 @@ html[data-theme="dark"] .theme-toggle__button:hover {
 
 html[data-theme="dark"] #theme-toggle #theme-icon {
   color: #f3f7ff;
-}
-
-.page__inner-wrap > .paper-header-card:empty {
-  display: none;
 }
 
 html[data-theme="dark"] #site-nav button {
