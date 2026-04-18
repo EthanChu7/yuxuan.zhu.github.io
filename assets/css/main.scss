@@ -974,7 +974,12 @@ html[data-theme="dark"] .sidebar .author-card {
   flex: 0 0 1.05rem;
   display: block;
   object-fit: contain;
+  object-position: center;
   opacity: 1;
+}
+
+.author-link-icon--openreview {
+  border-radius: 0.22rem;
 }
 
 html[data-theme="dark"] .sidebar .author__urls li a {
