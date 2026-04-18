@@ -907,8 +907,8 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 .sidebar .author__urls {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
   margin-top: 1.05rem;
 }
@@ -916,14 +916,13 @@ html[data-theme="dark"] .sidebar .author-card {
 .sidebar .author__urls li {
   margin: 0;
   min-width: 0;
-  flex: 0 0 auto;
-  max-width: 100%;
+  max-width: none;
 }
 
 .sidebar .author__urls li a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.48rem;
   padding: 0.42rem 0.75rem;
   border: 1px solid var(--site-border);
@@ -934,10 +933,11 @@ html[data-theme="dark"] .sidebar .author-card {
   color: var(--site-ink);
   min-height: 0;
   line-height: 1.2;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  max-width: none;
   box-sizing: border-box;
   box-shadow: none;
+  text-align: center;
 }
 
 .sidebar .author__urls li a:hover {
@@ -985,6 +985,10 @@ html[data-theme="dark"] .sidebar .author-card {
   filter: grayscale(1) brightness(0.55);
 }
 
+.sidebar .author__urls li a span {
+  white-space: nowrap;
+}
+
 html[data-theme="dark"] .author-link-icon--openreview {
   filter: grayscale(1) invert(1) brightness(1.15) contrast(1.05);
 }
@@ -999,6 +1003,12 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
   background: rgba(125, 211, 252, 0.08);
   border-color: rgba(125, 211, 252, 0.22);
   box-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .sidebar .author__urls {
+    grid-template-columns: 1fr;
+  }
 }
 
 
