@@ -986,7 +986,7 @@ html[data-theme="dark"] .sidebar .author-card {
 }
 
 html[data-theme="dark"] .author-link-icon--openreview {
-  filter: grayscale(1) brightness(3.1) contrast(1.15);
+  filter: grayscale(1) invert(1) brightness(1.15) contrast(1.05);
 }
 
 html[data-theme="dark"] .sidebar .author__urls li a {
