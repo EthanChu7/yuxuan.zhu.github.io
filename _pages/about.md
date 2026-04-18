@@ -8,8 +8,8 @@ redirect_from:
 
 <section class="content-card intro-card">
   <h2>Biography</h2>
-  <p class="intro-lead">I work on recommender systems and causality-inspired machine learning, with a focus on explainability, robustness, and large-scale industrial recommendation.</p>
   <p>I am currently a <strong>Research &amp; Machine Learning Engineer</strong> at <strong>Shopee</strong>, where I work on model development for the retrieval and pre-rank stages of Shopee Search. Before that, I completed both my <strong>M.S.</strong> and <strong>B.S.</strong> in Computer Science at <strong>Guangdong University of Technology</strong>.</p>
+  <p class="intro-lead">I work on <strong>recommender systems</strong> and <strong>causal machine learning</strong>, with a focus on <strong>generative recommendation</strong> and <strong>large recommendation models</strong>.</p>
 </section>
 
 <section class="split-grid">
@@ -26,11 +26,10 @@ redirect_from:
     <h2>Research Interests</h2>
     <div class="tag-cloud">
       <span>Recommender Systems</span>
+      <span>Generative Recommendation</span>
+      <span>Large Recommendation Models</span>
       <span>Causal Machine Learning</span>
       <span>Explainable AI</span>
-      <span>Counterfactual Learning</span>
-      <span>Robust Modeling</span>
-      <span>Industrial Ranking</span>
     </div>
   </article>
 </section>

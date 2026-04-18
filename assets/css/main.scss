@@ -644,10 +644,12 @@ html[data-theme="dark"] .masthead {
 .site-brand {
   display: inline-flex;
   align-items: center;
+  align-self: stretch;
   min-width: 0;
   color: var(--site-ink);
   text-decoration: none;
-  padding: 0.72rem 0;
+  min-height: 3.1rem;
+  padding: 0 0.05rem;
   border-bottom: 2px solid transparent;
 }
 
@@ -685,11 +687,14 @@ html[data-theme="dark"] .masthead {
 }
 
 .masthead .visible-links > li > a {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--site-muted);
-  padding: 0.72rem 0.9rem;
+  min-height: 3.1rem;
+  padding: 0 0.9rem;
   margin: 0;
   border-radius: 0;
   border-bottom: 2px solid transparent;
@@ -701,7 +706,7 @@ html[data-theme="dark"] .masthead {
 .masthead .visible-links > li > a:hover {
   color: var(--site-ink);
   text-decoration: none;
-  background: transparent;
+  background: transparent !important;
 }
 
 html[data-theme="dark"] .masthead .visible-links > li > a {
@@ -711,7 +716,7 @@ html[data-theme="dark"] .masthead .visible-links > li > a {
 html[data-theme="dark"] .masthead .visible-links > li.selected > a,
 html[data-theme="dark"] .masthead .visible-links > li > a:hover {
   color: #edf4ff;
-  background: transparent;
+  background: transparent !important;
 }
 
 .masthead .visible-links > li.selected > a {
@@ -731,14 +736,15 @@ html[data-theme="dark"] .masthead .visible-links > li > a:hover {
   align-items: center;
   justify-content: flex-end;
   flex: 0 0 auto;
+  min-height: 3.1rem;
 }
 
 .theme-toggle__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.4rem;
+  height: 1.4rem;
   padding: 0;
   border-radius: 0;
   border: 0 !important;
@@ -754,7 +760,7 @@ html[data-theme="dark"] .masthead .visible-links > li > a:hover {
 .theme-toggle__button #theme-icon {
   color: var(--site-ink);
   opacity: 1;
-  font-size: 1.45rem;
+  font-size: 1.18rem;
   line-height: 1;
 }
 
@@ -1468,9 +1474,17 @@ html[data-theme="dark"] .paper-header-card {
     max-width: 110px;
   }
 
-  .sidebar .author__content {
-    padding: 0;
-  }
+.sidebar .author__content {
+  margin-bottom: 0.2rem;
+}
+
+.sidebar .author__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar .author__content {
+  padding: 0;
+}
 
   .sidebar .author__urls-wrapper {
     grid-column: 1 / -1;
