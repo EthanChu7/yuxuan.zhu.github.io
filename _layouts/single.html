@@ -59,8 +59,17 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
-        {{ content }}
+      <section class="page__content{% if page.collection == 'publications' %} page__content--paper{% endif %}" itemprop="text">
+        {% if page.collection == 'publications' %}
+          <div class="paper-abstract-card">
+            <div class="paper-abstract-card__eyebrow">Abstract</div>
+            <div class="paper-abstract-card__body">
+              {{ content }}
+            </div>
+          </div>
+        {% else %}
+          {{ content }}
+        {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
