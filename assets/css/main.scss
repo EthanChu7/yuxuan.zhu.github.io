@@ -956,6 +956,18 @@ html[data-theme="dark"] .sidebar .author-card {
   font-size: 0.95rem;
 }
 
+.sidebar .author__urls li a .ai-orcid {
+  color: #a6ce39;
+}
+
+.sidebar .author__urls li a .ai-dblp {
+  background: linear-gradient(90deg, #004f9f 0 68%, #f2c94c 68% 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 .author-link-icon {
   width: 1.05rem;
   height: 1.05rem;
