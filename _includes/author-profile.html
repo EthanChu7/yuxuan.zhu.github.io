@@ -28,13 +28,13 @@
         <li><a href="{{ author.googlescholar }}"><img src="{{ base_path }}/images/google-scholar-modern.svg" alt="" class="author-link-icon author-link-icon--scholar" /><span>Scholar</span></a></li>
       {% endif %}
       {% if author.openreview %}
-        <li><a href="{{ author.openreview }}"><img src="{{ base_path }}/images/openreview-logo.png" alt="" class="author-link-icon author-link-icon--openreview" /><span>OpenReview</span></a></li>
+        <li><a href="{{ author.openreview }}"><img src="{{ base_path }}/images/openreview.png" alt="" class="author-link-icon author-link-icon--openreview" /><span>OpenReview</span></a></li>
       {% endif %}
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span></a></li>
       {% endif %}
       {% if author.dblp %}
-        <li><a href="{{ author.dblp }}"><i class="ai ai-dblp" aria-hidden="true"></i><span>DBLP</span></a></li>
+        <li><a href="{{ author.dblp }}"><img src="{{ base_path }}/images/dblp.png" alt="" class="author-link-icon author-link-icon--dblp" /><span>DBLP</span></a></li>
       {% endif %}
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>
