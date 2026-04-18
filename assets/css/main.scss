@@ -709,6 +709,11 @@ html[data-theme="dark"] .masthead {
   transition: transform 0.18s ease;
 }
 
+.masthead .visible-links > li > a::before,
+.masthead .visible-links > li > .site-brand::before {
+  display: none !important;
+}
+
 .masthead .visible-links > li.selected > a::after {
   transform: scaleX(1);
 }
@@ -762,14 +767,15 @@ html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
   justify-content: flex-end;
   flex: 0 0 auto;
   min-height: 3rem;
+  padding-top: 0.02rem;
 }
 
 .theme-toggle__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 1.7rem;
+  height: 1.7rem;
   padding: 0;
   border-radius: 0;
   border: 0 !important;
@@ -785,7 +791,7 @@ html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
 .theme-toggle__button #theme-icon {
   color: var(--site-ink);
   opacity: 1;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   line-height: 1;
 }
 
@@ -944,6 +950,7 @@ html[data-theme="dark"] .sidebar .author-card {
   width: 1rem;
   text-align: center;
   opacity: 0.92;
+  font-size: 0.95rem;
 }
 
 .author-link-icon {
@@ -952,6 +959,8 @@ html[data-theme="dark"] .sidebar .author-card {
   flex: 0 0 1rem;
   display: block;
   object-fit: contain;
+  filter: grayscale(1) brightness(0.35);
+  opacity: 0.92;
 }
 
 html[data-theme="dark"] .sidebar .author__urls li a {
@@ -964,6 +973,11 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
   background: rgba(125, 211, 252, 0.08);
   border-color: rgba(125, 211, 252, 0.22);
   box-shadow: none;
+}
+
+html[data-theme="dark"] .author-link-icon {
+  filter: grayscale(1) brightness(2.8);
+  opacity: 0.95;
 }
 
 #main {

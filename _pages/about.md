@@ -40,11 +40,11 @@ redirect_from:
   </div>
   <div class="timeline-list">
     <article class="timeline-item">
-      <span class="timeline-date">2026</span>
+      <span class="timeline-date">2026 Feb</span>
       <p>Released two new arXiv preprints: <strong>ReSID</strong> (<a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a>) and <strong>ManCAR</strong> (<a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>).</p>
     </article>
     <article class="timeline-item">
-      <span class="timeline-date">2025</span>
+      <span class="timeline-date">2025 Oct</span>
       <p>Published a KDD paper on deep collaborative filtering and released new industry-scale recommendation preprints including <strong>OnePiece</strong> and <strong>ELBO-TDS</strong>.</p>
     </article>
   </div>
@@ -52,8 +52,8 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div><h2>Selected publications</h2></div>
-    <a class="section-link" href="{{ '/publications/' | relative_url }}">View all publications</a>
+    <div><h2>Selected Publications</h2></div>
+    <a class="section-link" href="{{ '/publications/' | relative_url }}">View All</a>
   </div>
 
   <div class="publication-grid">
@@ -158,7 +158,7 @@ redirect_from:
 
 <section class="split-grid split-grid--bottom">
   <article class="content-card">
-    <h2>Work experience</h2>
+    <h2>Work Experience</h2>
     <div class="experience-card">
       <p class="experience-role">Research &amp; Machine Learning Engineer</p>
       <p class="experience-org">Shopee, Search, Recommendation &amp; Ads</p>
@@ -168,7 +168,7 @@ redirect_from:
   </article>
 
   <article class="content-card">
-    <h2>Academic service</h2>
+    <h2>Service</h2>
     <div class="service-panel">
       <p><strong>Reviewer</strong></p>
       <p>NeurIPS, AAAI, SIGIR, and related venues.</p>
