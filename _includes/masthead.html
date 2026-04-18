@@ -3,23 +3,23 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <div class="masthead__primary">
-          <a class="site-brand {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}" href="{{ base_path }}/" aria-label="{{ site.title }}">
-            <span class="site-brand__title">{{ site.title }}</span>
-          </a>
-          <ul id="site-nav-links" class="visible-links">
-            {% for link in site.data.navigation.main %}
-              {% if link.url contains 'http' %}
-                {% assign domain = '' %}
-              {% else %}
-                {% assign domain = base_path %}
-              {% endif %}
-              <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-                <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+        <ul id="site-nav-links" class="visible-links">
+          <li class="masthead__menu-item {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
+            <a class="site-brand" href="{{ base_path }}/" aria-label="{{ site.title }}">
+              <span class="site-brand__title">{{ site.title }}</span>
+            </a>
+          </li>
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
         <div class="masthead__actions">
           <a href="#" class="theme-toggle__button" aria-label="Toggle theme" role="button">
             <i id="theme-icon" class="fa-solid fa-circle-half-stroke" aria-hidden="true" title="toggle theme"></i>
