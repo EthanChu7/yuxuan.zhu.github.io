@@ -138,14 +138,10 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div><h2>Co-authors</h2></div>
+    <div><h2>Collaborators</h2></div>
   </div>
   <div class="coauthor-graph">
     <div class="coauthor-graph__topbar">
-      <div class="coauthor-graph__intro">
-        <p class="coauthor-graph__eyebrow">Top Collaborators</p>
-        <p class="coauthor-graph__summary">Researchers I publish with most frequently.</p>
-      </div>
       <div id="coauthor-top-list" class="coauthor-top-list" aria-label="Top 5 collaborators"></div>
     </div>
     <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
