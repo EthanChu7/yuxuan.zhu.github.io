@@ -1,34 +1,116 @@
 const stage = document.getElementById("coauthor-graph-app");
 const payload = document.getElementById("coauthor-graph-data");
+const statsRoot = document.getElementById("coauthor-stats");
+const listRoot = document.getElementById("coauthor-list");
 
 if (stage && payload) {
   const SELF_NAME = stage.dataset.selfName || "Yuxuan Zhu";
   const publications = JSON.parse(payload.textContent);
 
   const stripHtml = (value) => value.replace(/<[^>]+>/g, "").trim();
+  const stat = (name) => statsRoot?.querySelector(`[data-stat="${name}"]`);
+  const escapeHtml = (value) =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
 
   const parseAuthors = (citation) => {
     const clean = stripHtml(citation);
     const match = clean.match(/^(.*?)\.\s*\(\d{4}\)\./);
     if (!match) return [];
     return match[1]
+      .replace(/\s+and\s+/g, ", ")
       .split(",")
       .map((name) => name.trim().replace(/\.$/, ""))
       .filter(Boolean);
   };
 
+  const parseYear = (citation) => {
+    const clean = stripHtml(citation);
+    const match = clean.match(/\((\d{4})\)/);
+    return match ? Number(match[1]) : null;
+  };
+
   const collaboratorCounts = new Map();
+  const collaboratorPapers = new Map();
+  const collaborationYears = [];
+  const selfPublications = [];
+
   for (const paper of publications) {
     const authors = parseAuthors(paper.citation);
     if (!authors.includes(SELF_NAME)) continue;
+    selfPublications.push(paper);
+
+    const year = parseYear(paper.citation);
+    if (year) collaborationYears.push(year);
+
     const uniqueCoauthors = new Set(authors.filter((name) => name !== SELF_NAME));
     uniqueCoauthors.forEach((name) => {
       collaboratorCounts.set(name, (collaboratorCounts.get(name) || 0) + 1);
+      const papers = collaboratorPapers.get(name) || [];
+      papers.push(paper);
+      collaboratorPapers.set(name, papers);
     });
   }
 
   const collaborators = Array.from(collaboratorCounts.entries())
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+  if (stat("unique")) stat("unique").textContent = String(collaborators.length);
+  if (stat("papers")) stat("papers").textContent = String(selfPublications.length);
+
+  const [topName, topCount] = collaborators[0] || ["No co-authors yet", 0];
+  if (stat("top-name")) stat("top-name").textContent = topName;
+  if (stat("top-count")) {
+    stat("top-count").textContent = topCount ? `${topCount} joint publication${topCount > 1 ? "s" : ""}` : "";
+  }
+  if (stat("latest-year")) {
+    stat("latest-year").textContent = collaborationYears.length ? String(Math.max(...collaborationYears)) : "--";
+  }
+
+  if (listRoot) {
+    if (!collaborators.length) {
+      listRoot.innerHTML = `
+        <article class="coauthor-list__empty">
+          <p>No co-author data is available yet.</p>
+        </article>
+      `;
+    } else {
+      const maxCount = collaborators[0][1];
+      listRoot.innerHTML = collaborators
+        .slice(0, 8)
+        .map(([name, count], index) => {
+          const papers = collaboratorPapers.get(name) || [];
+          const latestPaper = papers
+            .slice()
+            .sort((a, b) => (parseYear(b.citation) || 0) - (parseYear(a.citation) || 0))[0];
+          const latestPaperLink = latestPaper?.url ? latestPaper.url : null;
+          const latestPaperTitle = latestPaper?.title || "Recent publication";
+          const strength = maxCount ? Math.max(20, Math.round((count / maxCount) * 100)) : 0;
+
+          return `
+            <article class="coauthor-list__item">
+              <div class="coauthor-list__topline">
+                <span class="coauthor-list__rank">#${index + 1}</span>
+                <h4>${escapeHtml(name)}</h4>
+                <span class="coauthor-list__count">${count}</span>
+              </div>
+              <div class="coauthor-list__bar"><span style="width:${strength}%"></span></div>
+              <p>${count} shared publication${count > 1 ? "s" : ""}</p>
+              ${
+                latestPaperLink
+                  ? `<a href="${latestPaperLink}" class="coauthor-list__paper">Latest: ${escapeHtml(latestPaperTitle)}</a>`
+                  : ""
+              }
+            </article>
+          `;
+        })
+        .join("");
+    }
+  }
 
   const canvas = document.createElement("canvas");
   canvas.className = "coauthor-graph__canvas";
@@ -42,6 +124,7 @@ if (stage && payload) {
     rotationY: 0,
     rotationX: -0.24,
     isDragging: false,
+    hasInteracted: false,
     pointerId: null,
     lastX: 0,
     lastY: 0,
@@ -219,6 +302,7 @@ if (stage && payload) {
     state.pointerId = event.pointerId;
     state.lastX = event.clientX;
     state.lastY = event.clientY;
+    state.hasInteracted = true;
     canvas.setPointerCapture(event.pointerId);
     updateCursor();
   };
@@ -246,6 +330,9 @@ if (stage && payload) {
   };
 
   const animate = () => {
+    if (!state.isDragging && !state.hasInteracted) {
+      state.rotationY += window.innerWidth < 768 ? 0.0022 : 0.0013;
+    }
     draw();
     requestAnimationFrame(animate);
   };

@@ -138,10 +138,55 @@ redirect_from:
 
 <section class="content-card">
   <div class="section-heading">
-    <div><h2>Co-authors</h2></div>
+    <div>
+      <h2>Collaborators</h2>
+      <p class="section-subtitle">A quick view of the people, frequency, and recent shape of my research collaborations.</p>
+    </div>
   </div>
-  <div class="coauthor-graph">
-    <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
+  <div class="coauthor-overview" id="coauthor-overview">
+    <div class="coauthor-overview__stats" id="coauthor-stats">
+      <article class="coauthor-stat">
+        <span class="coauthor-stat__label">Unique collaborators</span>
+        <strong class="coauthor-stat__value" data-stat="unique">--</strong>
+      </article>
+      <article class="coauthor-stat">
+        <span class="coauthor-stat__label">Joint papers</span>
+        <strong class="coauthor-stat__value" data-stat="papers">--</strong>
+      </article>
+      <article class="coauthor-stat">
+        <span class="coauthor-stat__label">Most frequent collaborator</span>
+        <strong class="coauthor-stat__value coauthor-stat__value--name" data-stat="top-name">--</strong>
+        <span class="coauthor-stat__meta" data-stat="top-count"></span>
+      </article>
+      <article class="coauthor-stat">
+        <span class="coauthor-stat__label">Latest collaboration year</span>
+        <strong class="coauthor-stat__value" data-stat="latest-year">--</strong>
+      </article>
+    </div>
+
+    <div class="coauthor-overview__layout">
+      <div class="coauthor-graph">
+        <div class="coauthor-graph__header">
+          <div>
+            <p class="coauthor-graph__eyebrow">Collaboration Network</p>
+            <h3>Research circle centered on Yuxuan Zhu</h3>
+          </div>
+          <span class="coauthor-graph__hint">Drag to rotate</span>
+        </div>
+        <div id="coauthor-graph-app" class="coauthor-graph__stage" data-self-name="Yuxuan Zhu"></div>
+      </div>
+
+      <aside class="coauthor-sidebar">
+        <div class="coauthor-sidebar__header">
+          <div>
+            <p class="coauthor-graph__eyebrow">Frequent Co-authors</p>
+            <h3>Top collaborators by publication count</h3>
+          </div>
+        </div>
+        <div class="coauthor-list" id="coauthor-list"></div>
+      </aside>
+    </div>
+
     <script id="coauthor-graph-data" type="application/json">
       [
       {% for post in site.publications %}

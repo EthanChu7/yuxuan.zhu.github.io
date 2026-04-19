@@ -151,6 +151,14 @@
   margin-bottom: 0.25rem;
 }
 
+.section-subtitle {
+  margin: 0.25rem 0 0;
+  max-width: 44rem;
+  color: var(--site-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
 .content-card ul {
   margin-bottom: 0.25rem;
 }
@@ -204,6 +212,216 @@ html[data-theme="dark"] .sun-card {
 
 .publications-list .pub-venue {
   color: var(--global-text-color-light);
+}
+
+.coauthor-overview {
+  display: grid;
+  gap: 1rem;
+}
+
+.coauthor-overview__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.coauthor-stat {
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--site-border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--site-card) 0%, var(--site-card-strong) 100%);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+}
+
+.coauthor-stat__label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--site-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.coauthor-stat__value {
+  display: block;
+  color: var(--site-ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.coauthor-stat__value--name {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.coauthor-stat__meta {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: var(--site-muted);
+  font-size: 0.88rem;
+}
+
+.coauthor-overview__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.coauthor-graph,
+.coauthor-sidebar {
+  padding: 1rem;
+  border: 1px solid var(--site-border);
+  border-radius: 20px;
+  background: linear-gradient(180deg, var(--site-card) 0%, var(--site-card-strong) 100%);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.06);
+}
+
+.coauthor-graph__header,
+.coauthor-sidebar__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.coauthor-graph__eyebrow {
+  margin: 0 0 0.28rem;
+  color: var(--site-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coauthor-graph__header h3,
+.coauthor-sidebar__header h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.coauthor-graph__hint {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.28rem 0.72rem;
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  color: var(--site-muted);
+  font-size: 0.8rem;
+  background: color-mix(in srgb, var(--site-card) 65%, transparent);
+  white-space: nowrap;
+}
+
+.coauthor-graph__stage {
+  position: relative;
+  overflow: hidden;
+  min-height: 34rem;
+  border: 1px solid color-mix(in srgb, var(--site-border) 76%, transparent);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, var(--site-accent-soft) 0%, transparent 34%),
+    linear-gradient(180deg, color-mix(in srgb, var(--site-card) 82%, transparent) 0%, color-mix(in srgb, var(--site-page-bg) 88%, transparent) 100%);
+}
+
+.coauthor-graph__stage::before {
+  content: "";
+  position: absolute;
+  inset: 10% 14%;
+  border: 1px solid color-mix(in srgb, var(--site-border) 55%, transparent);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.coauthor-graph__canvas {
+  display: block;
+}
+
+.coauthor-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.coauthor-list__item,
+.coauthor-list__empty {
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--site-border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--site-page-bg) 52%, var(--site-card) 48%);
+}
+
+.coauthor-list__topline {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.coauthor-list__rank,
+.coauthor-list__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.coauthor-list__rank {
+  color: var(--site-accent);
+  background: var(--site-accent-soft);
+}
+
+.coauthor-list__count {
+  color: var(--site-ink);
+  background: color-mix(in srgb, var(--site-card-strong) 85%, transparent);
+}
+
+.coauthor-list__item h4 {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.coauthor-list__bar {
+  height: 0.42rem;
+  margin: 0.72rem 0 0.6rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--site-border) 55%, transparent);
+}
+
+.coauthor-list__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--site-accent) 0%, #78c7ff 100%);
+}
+
+.coauthor-list__item p,
+.coauthor-list__empty p {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: 0.9rem;
+}
+
+.coauthor-list__paper {
+  display: inline-block;
+  margin-top: 0.58rem;
+  color: var(--site-ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.coauthor-list__paper:hover {
+  color: var(--site-accent);
 }
 
 /* Modern share + pager on paper detail pages */
@@ -1383,6 +1601,13 @@ html[data-theme="dark"] .paper-abstract-card {
   background: linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(15, 23, 42, 0.98) 100%);
 }
 
+html[data-theme="dark"] .coauthor-stat,
+html[data-theme="dark"] .coauthor-graph,
+html[data-theme="dark"] .coauthor-sidebar {
+  box-shadow: none;
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(15, 23, 42, 0.98) 100%);
+}
+
 .page__content > h2,
 .page__content > h3 {
   margin-top: 1.4rem;
@@ -1421,6 +1646,11 @@ html[data-theme="dark"] .paper-abstract-card {
   .pub-year-grid,
   .split-grid {
     grid-template-columns: 1fr;
+  }
+
+  .coauthor-overview__stats,
+  .coauthor-overview__layout {
+    grid-template-columns: 1fr 1fr;
   }
 
   .intro-card h2 {
@@ -1500,9 +1730,30 @@ html[data-theme="dark"] .paper-abstract-card {
   }
 
   .section-heading,
-  .pub-year-header {
+  .pub-year-header,
+  .coauthor-graph__header,
+  .coauthor-sidebar__header {
     flex-direction: column;
     align-items: start;
+  }
+
+  .coauthor-overview__stats,
+  .coauthor-overview__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .coauthor-stat {
+    border-radius: 16px;
+  }
+
+  .coauthor-graph,
+  .coauthor-sidebar {
+    padding: 0.9rem;
+    border-radius: 18px;
+  }
+
+  .coauthor-graph__stage {
+    min-height: 24rem;
   }
 }
 
