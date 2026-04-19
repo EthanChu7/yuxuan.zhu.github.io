@@ -1,17 +1,26 @@
 const stage = document.getElementById("coauthor-graph-app");
 const payload = document.getElementById("coauthor-graph-data");
+const topList = document.getElementById("coauthor-top-list");
 
 if (stage && payload) {
   const SELF_NAME = stage.dataset.selfName || "Yuxuan Zhu";
   const publications = JSON.parse(payload.textContent);
 
   const stripHtml = (value) => value.replace(/<[^>]+>/g, "").trim();
+  const escapeHtml = (value) =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
 
   const parseAuthors = (citation) => {
     const clean = stripHtml(citation);
     const match = clean.match(/^(.*?)\.\s*\(\d{4}\)\./);
     if (!match) return [];
     return match[1]
+      .replace(/\s+and\s+/g, ", ")
       .split(",")
       .map((name) => name.trim().replace(/\.$/, ""))
       .filter(Boolean);
@@ -29,6 +38,23 @@ if (stage && payload) {
 
   const collaborators = Array.from(collaboratorCounts.entries())
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+
+  if (topList) {
+    topList.innerHTML = collaborators
+      .slice(0, 5)
+      .map(
+        ([name, count], index) => `
+          <article class="coauthor-top-card">
+            <span class="coauthor-top-card__rank">#${index + 1}</span>
+            <div class="coauthor-top-card__body">
+              <strong>${escapeHtml(name)}</strong>
+              <span>${count} paper${count > 1 ? "s" : ""}</span>
+            </div>
+          </article>
+        `
+      )
+      .join("");
+  }
 
   const canvas = document.createElement("canvas");
   canvas.className = "coauthor-graph__canvas";
