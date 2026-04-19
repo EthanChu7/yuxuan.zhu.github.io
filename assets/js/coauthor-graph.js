@@ -5,11 +5,21 @@ const topList = document.getElementById("coauthor-top-list");
 if (stage && payload) {
   const SELF_NAME = stage.dataset.selfName || "Yuxuan Zhu";
   const publications = JSON.parse(payload.textContent);
+  const nameCollator = new Intl.Collator("en", { sensitivity: "base" });
 
   const stripHtml = (value) => value.replace(/<[^>]+>/g, "").trim();
   const getFamilyName = (name) => {
     const parts = String(name).trim().split(/\s+/).filter(Boolean);
     return parts.length ? parts[parts.length - 1] : "";
+  };
+  const compareCollaborators = (a, b) => {
+    const countDiff = b[1] - a[1];
+    if (countDiff !== 0) return countDiff;
+
+    const familyNameDiff = nameCollator.compare(getFamilyName(a[0]), getFamilyName(b[0]));
+    if (familyNameDiff !== 0) return familyNameDiff;
+
+    return nameCollator.compare(a[0], b[0]);
   };
   const escapeHtml = (value) =>
     String(value)
@@ -41,15 +51,7 @@ if (stage && payload) {
   }
 
   const collaborators = Array.from(collaboratorCounts.entries())
-    .sort((a, b) => {
-      const countDiff = b[1] - a[1];
-      if (countDiff !== 0) return countDiff;
-
-      const familyNameDiff = getFamilyName(a[0]).localeCompare(getFamilyName(b[0]));
-      if (familyNameDiff !== 0) return familyNameDiff;
-
-      return a[0].localeCompare(b[0]);
-    });
+    .sort(compareCollaborators);
 
   if (topList) {
     topList.innerHTML = collaborators
