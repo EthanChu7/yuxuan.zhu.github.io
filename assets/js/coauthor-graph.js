@@ -7,6 +7,10 @@ if (stage && payload) {
   const publications = JSON.parse(payload.textContent);
 
   const stripHtml = (value) => value.replace(/<[^>]+>/g, "").trim();
+  const getFamilyName = (name) => {
+    const parts = String(name).trim().split(/\s+/).filter(Boolean);
+    return parts.length ? parts[parts.length - 1] : "";
+  };
   const escapeHtml = (value) =>
     String(value)
       .replace(/&/g, "&amp;")
@@ -37,7 +41,15 @@ if (stage && payload) {
   }
 
   const collaborators = Array.from(collaboratorCounts.entries())
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    .sort((a, b) => {
+      const countDiff = b[1] - a[1];
+      if (countDiff !== 0) return countDiff;
+
+      const familyNameDiff = getFamilyName(a[0]).localeCompare(getFamilyName(b[0]));
+      if (familyNameDiff !== 0) return familyNameDiff;
+
+      return a[0].localeCompare(b[0]);
+    });
 
   if (topList) {
     topList.innerHTML = collaborators
