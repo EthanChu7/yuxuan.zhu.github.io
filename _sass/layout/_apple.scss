@@ -99,31 +99,31 @@ a:hover {
 /* Global navigation */
 .masthead {
   height: auto;
-  background: rgba(250, 250, 252, 0.82);
-  border: 0;
+  background: rgba(250, 250, 252, 0.88);
+  border-bottom: 1px solid var(--apple-border);
   box-shadow: none;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 
 .masthead::after {
-  background: var(--apple-border);
+  display: none;
 }
 
 html[data-theme="dark"] .masthead {
-  background: rgba(22, 22, 23, 0.82);
-  border: 0;
+  background: rgba(22, 22, 23, 0.88);
+  border-bottom-color: var(--apple-border);
   box-shadow: none;
 }
 
 .masthead__inner-wrap {
   max-width: 1200px;
-  padding: 0 22px;
+  padding: 7px 22px;
 }
 
 .greedy-nav {
-  min-height: 48px;
-  gap: 24px;
+  min-height: 38px;
+  gap: 16px;
   background: transparent;
 }
 
@@ -133,17 +133,17 @@ html[data-theme="dark"] .masthead {
 
 .masthead .visible-links > li > a,
 .masthead .visible-links > li > .site-brand {
-  min-height: 48px;
-  padding: 0 12px;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
   color: var(--apple-text);
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0;
-  opacity: 0.82;
+  opacity: 0.68;
 }
 
 .masthead .visible-links > li:first-child > .site-brand {
-  padding-left: 0;
   font-weight: 600;
   opacity: 1;
 }
@@ -157,9 +157,7 @@ html[data-theme="dark"] .masthead {
 
 .masthead .visible-links > li > a::after,
 .masthead .visible-links > li > .site-brand::after {
-  bottom: 0;
-  height: 1px;
-  background: currentColor;
+  display: none;
 }
 
 .masthead .visible-links > li.selected > a,
@@ -168,6 +166,26 @@ html[data-theme="dark"] .masthead {
 .masthead .visible-links > li > .site-brand:hover {
   color: var(--apple-text);
   opacity: 1;
+}
+
+.masthead .visible-links > li.selected > a,
+.masthead .visible-links > li.selected > .site-brand {
+  background: rgba(0, 0, 0, 0.055) !important;
+}
+
+.masthead .visible-links > li > a:hover,
+.masthead .visible-links > li > .site-brand:hover {
+  background: rgba(0, 0, 0, 0.035) !important;
+}
+
+html[data-theme="dark"] .masthead .visible-links > li.selected > a,
+html[data-theme="dark"] .masthead .visible-links > li.selected > .site-brand {
+  background: rgba(255, 255, 255, 0.11) !important;
+}
+
+html[data-theme="dark"] .masthead .visible-links > li > a:hover,
+html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
 }
 
 html[data-theme="dark"] .masthead .visible-links > li > a,
@@ -181,14 +199,16 @@ html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
 
 .masthead__actions,
 .theme-toggle__button {
-  min-height: 48px;
-  height: 48px;
+  min-height: 34px;
+  height: 34px;
 }
 
 .theme-toggle__button {
-  width: 32px;
+  width: 34px;
   padding: 0;
+  border: 1px solid var(--apple-border) !important;
   border-radius: 999px;
+  background: rgba(0, 0, 0, 0.035) !important;
 }
 
 .theme-toggle__button #theme-icon,
@@ -202,11 +222,28 @@ html[data-theme="dark"] .theme-toggle__button #theme-icon {
   opacity: 1;
 }
 
+.theme-toggle__button:hover {
+  background: rgba(0, 0, 0, 0.065) !important;
+}
+
+html[data-theme="dark"] .theme-toggle__button,
+html[data-theme="dark"] .theme-toggle__button:hover {
+  border-color: var(--apple-border) !important;
+}
+
+html[data-theme="dark"] .theme-toggle__button {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .theme-toggle__button:hover {
+  background: rgba(255, 255, 255, 0.13) !important;
+}
+
 /* Page canvas and profile */
 #main {
   max-width: 1200px;
   margin-top: 0;
-  padding: 56px 22px 72px;
+  padding: 32px 22px 72px;
 }
 
 #main.has-sidebar {
@@ -342,7 +379,11 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
 
 @media (max-width: 767px) {
   #main {
-    padding: 28px 18px 52px;
+    padding: var(--apple-card-gap) 18px 52px !important;
+  }
+
+  .sidebar.sticky {
+    margin-bottom: var(--apple-card-gap) !important;
   }
 
   .sidebar .author-card {
@@ -381,24 +422,24 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
 
 @media (max-width: 640px) {
   .masthead__inner-wrap {
-    padding: 0 16px;
+    padding: 6px 12px;
   }
 
   .greedy-nav {
-    gap: 8px;
+    gap: 6px;
   }
 
   .masthead .visible-links > li > a,
   .masthead .visible-links > li > .site-brand {
-    min-height: 44px;
-    padding: 0 8px;
+    min-height: 34px;
+    padding: 0 11px;
     font-size: 12px;
   }
 
   .masthead__actions,
   .theme-toggle__button {
-    min-height: 44px;
-    height: 44px;
+    min-height: 34px;
+    height: 34px;
   }
 }
 
@@ -644,6 +685,7 @@ html[data-theme="dark"] .intro-card {
 /* Selected publications */
 .publication-grid {
   gap: var(--apple-card-gap);
+  grid-auto-rows: 1fr;
 }
 
 .pub-card {
@@ -651,6 +693,7 @@ html[data-theme="dark"] .intro-card {
   display: flex;
   flex-direction: column;
   min-height: 220px;
+  height: 100%;
   padding: 26px;
   border-radius: var(--apple-radius-md);
   background: var(--apple-bg);
