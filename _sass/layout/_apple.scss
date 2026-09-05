@@ -18,6 +18,7 @@
   --apple-radius-lg: 28px;
   --apple-radius-md: 20px;
   --apple-radius-sm: 12px;
+  --apple-card-gap: 20px;
   --apple-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --site-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
   --site-page-bg: var(--apple-bg);
@@ -465,28 +466,11 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
   overflow: hidden;
   min-height: 300px;
   padding: clamp(38px, 6vw, 72px);
-  background:
-    radial-gradient(circle at 92% 8%, rgba(0, 113, 227, 0.15), transparent 34%),
-    linear-gradient(145deg, #ffffff 0%, #f5f5f7 100%);
-}
-
-.intro-card::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: -80px;
-  bottom: -150px;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, rgba(0, 113, 227, 0.12), rgba(90, 200, 250, 0.03));
-  filter: blur(2px);
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f7 100%);
 }
 
 html[data-theme="dark"] .intro-card {
-  background:
-    radial-gradient(circle at 92% 8%, rgba(41, 151, 255, 0.2), transparent 34%),
-    linear-gradient(145deg, #1d1d1f 0%, #101012 100%);
+  background: linear-gradient(145deg, #1d1d1f 0%, #101012 100%);
 }
 
 .intro-card h2 {
@@ -520,7 +504,7 @@ html[data-theme="dark"] .intro-card {
 
 /* Supporting information */
 .split-grid {
-  gap: 20px;
+  gap: var(--apple-card-gap);
 }
 
 .split-grid .content-card {
@@ -659,14 +643,14 @@ html[data-theme="dark"] .intro-card {
 
 /* Selected publications */
 .publication-grid {
-  gap: 16px;
+  gap: var(--apple-card-gap);
 }
 
 .pub-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 206px;
+  min-height: 220px;
   padding: 26px;
   border-radius: var(--apple-radius-md);
   background: var(--apple-bg);
@@ -680,34 +664,8 @@ html[data-theme="dark"] .intro-card {
 
 .pub-card--featured,
 html[data-theme="dark"] .pub-card--featured {
-  min-height: 260px;
-  background:
-    radial-gradient(circle at 95% 5%, rgba(41, 151, 255, 0.3), transparent 38%),
-    linear-gradient(145deg, #232326 0%, #09090a 100%);
-}
-
-.pub-card--featured h3,
-.pub-card--featured strong {
-  color: #f5f5f7;
-}
-
-.pub-card--featured p {
-  color: #a1a1a6;
-}
-
-.pub-card--featured .pub-year-badge {
-  background: rgba(41, 151, 255, 0.18);
-  color: #64b5ff;
-}
-
-.pub-card--featured .pub-links-inline a {
-  background: rgba(255, 255, 255, 0.1);
-  color: #f5f5f7;
-}
-
-.pub-card--featured .pub-links-inline a:hover {
-  background: rgba(41, 151, 255, 0.2);
-  color: #ffffff;
+  min-height: 220px;
+  background: var(--apple-bg);
 }
 
 .pub-card h3,
@@ -728,15 +686,6 @@ html[data-theme="dark"] .pub-card--featured {
   margin: 0 0 18px;
   color: var(--apple-secondary);
   font-size: 13px;
-}
-
-.pub-card.pub-card--featured h3,
-.pub-card.pub-card--featured strong {
-  color: #f5f5f7;
-}
-
-.pub-card.pub-card--featured p {
-  color: #a1a1a6;
 }
 
 .pub-card .pub-links-inline {
@@ -803,9 +752,7 @@ html[data-theme="dark"] .pub-card--featured {
 .coauthor-graph__stage,
 html[data-theme="dark"] .coauthor-graph__stage {
   border-radius: var(--apple-radius-md);
-  background:
-    radial-gradient(circle at 50% 50%, rgba(0, 113, 227, 0.1), transparent 46%),
-    var(--apple-bg);
+  background: var(--apple-bg);
 }
 
 /* Publications archive */
@@ -983,8 +930,12 @@ html[data-theme="dark"] .modern-pagination .pagination--pager {
 }
 
 @media (max-width: 767px) {
+  :root {
+    --apple-card-gap: 14px;
+  }
+
   .page__content > section + section {
-    margin-top: 14px;
+    margin-top: var(--apple-card-gap);
   }
 
   .content-card {
@@ -1004,7 +955,7 @@ html[data-theme="dark"] .modern-pagination .pagination--pager {
   .publication-grid,
   .pub-year-grid,
   .split-grid {
-    gap: 14px;
+    gap: var(--apple-card-gap);
   }
 
   .pub-card,
