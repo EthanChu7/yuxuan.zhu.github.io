@@ -204,6 +204,8 @@ html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
 }
 
 .theme-toggle__button {
+  display: grid !important;
+  place-items: center;
   width: 34px;
   padding: 0;
   border: 1px solid var(--apple-border) !important;
@@ -213,9 +215,22 @@ html[data-theme="dark"] .masthead .visible-links > li > .site-brand:hover {
 
 .theme-toggle__button #theme-icon,
 html[data-theme="dark"] .theme-toggle__button #theme-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  box-sizing: border-box;
   color: var(--apple-text);
-  font-size: 13px;
+  font-size: 0;
+  line-height: 0;
   opacity: 0.72;
+}
+
+.theme-toggle__button #theme-icon::before {
+  content: none;
 }
 
 .theme-toggle__button:hover #theme-icon {
@@ -507,11 +522,11 @@ html[data-theme="dark"] .sidebar .author__urls li a:hover {
   overflow: hidden;
   min-height: 300px;
   padding: clamp(38px, 6vw, 72px);
-  background: linear-gradient(145deg, #ffffff 0%, #f5f5f7 100%);
+  background: var(--apple-surface);
 }
 
 html[data-theme="dark"] .intro-card {
-  background: linear-gradient(145deg, #1d1d1f 0%, #101012 100%);
+  background: var(--apple-surface);
 }
 
 .intro-card h2 {
