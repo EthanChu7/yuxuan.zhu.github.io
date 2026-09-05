@@ -1760,3 +1760,6 @@ html[data-theme="dark"] .paper-abstract-card {
     padding-top: 0 !important;
   }
 }
+
+/* Final visual layer. Kept last so it consistently refines legacy theme rules. */
+@import "layout/apple";
