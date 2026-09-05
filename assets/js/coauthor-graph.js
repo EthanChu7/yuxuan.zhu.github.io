@@ -103,7 +103,7 @@ if (stage && payload) {
   const fontFamily = getComputedStyle(document.body).fontFamily || "sans-serif";
 
   const colors = () => {
-    const dark = document.documentElement.classList.contains("dark");
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
     return dark
       ? {
           glow: "rgba(66, 153, 225, 0.18)",
@@ -128,7 +128,7 @@ if (stage && payload) {
   const resize = () => {
     const rect = stage.getBoundingClientRect();
     state.width = Math.max(Math.round(rect.width), 320);
-    state.height = window.innerWidth < 768 ? 380 : 660;
+    state.height = window.innerWidth < 768 ? 620 : 660;
     canvas.width = state.width * state.dpr;
     canvas.height = state.height * state.dpr;
     canvas.style.width = `${state.width}px`;
@@ -141,9 +141,9 @@ if (stage && payload) {
       return { x: 0, y: 0, z: 1.1, scale: 1.08 };
     }
 
-    const radiusBase = window.innerWidth < 768 ? 146 : 170;
-    const radiusBoost = window.innerWidth < 768 ? 10 : 14;
-    const radiusCap = window.innerWidth < 768 ? 26 : 34;
+    const radiusBase = window.innerWidth < 768 ? 104 : 170;
+    const radiusBoost = window.innerWidth < 768 ? 6 : 14;
+    const radiusCap = window.innerWidth < 768 ? 18 : 34;
     const radius = radiusBase + Math.min(node.count * radiusBoost, radiusCap);
     const sx = Math.sin(node.phi) * Math.cos(node.theta);
     const sy = Math.cos(node.phi);
@@ -188,6 +188,56 @@ if (stage && payload) {
     const projected = nodes.map((node) => ({ node, ...projectNode(node) }));
     const centerNode = projected[0];
     const others = projected.slice(1).sort((a, b) => a.z - b.z);
+    const isCompact = window.innerWidth < 768;
+    const minLabelY = -state.height / 2 + (isCompact ? 20 : 28);
+    const maxLabelY = state.height / 2 - (isCompact ? 20 : 28);
+    const labelGap = isCompact ? 15 : 19;
+
+    const spreadLabels = (entries) => {
+      const sorted = entries.sort((a, b) => a.targetY - b.targetY);
+      let cursor = minLabelY;
+
+      sorted.forEach((entry) => {
+        entry.labelY = Math.max(entry.targetY, cursor);
+        cursor = entry.labelY + labelGap;
+      });
+
+      if (sorted.length && sorted[sorted.length - 1].labelY > maxLabelY) {
+        sorted[sorted.length - 1].labelY = maxLabelY;
+        for (let index = sorted.length - 2; index >= 0; index -= 1) {
+          sorted[index].labelY = Math.min(
+            sorted[index].labelY,
+            sorted[index + 1].labelY - labelGap
+          );
+        }
+      }
+
+      if (sorted.length && sorted[0].labelY < minLabelY) {
+        const offset = minLabelY - sorted[0].labelY;
+        sorted.forEach((entry) => {
+          entry.labelY += offset;
+        });
+      }
+
+      return sorted;
+    };
+
+    const labels = others.map((entry) => {
+      const baseSize = isCompact ? 8 : 12;
+      const bonusSize = Math.min(
+        entry.node.count * (isCompact ? 0.25 : 0.55),
+        isCompact ? 1.5 : 3
+      );
+      return {
+        ...entry,
+        nameSize: Math.round(baseSize * entry.scale + bonusSize),
+        targetY: entry.y + 4,
+        side: entry.x >= 0 ? "right" : "left",
+      };
+    });
+
+    spreadLabels(labels.filter((entry) => entry.side === "left"));
+    spreadLabels(labels.filter((entry) => entry.side === "right"));
 
     ctx.save();
     ctx.translate(centerX, centerY);
@@ -204,7 +254,7 @@ if (stage && payload) {
       ctx.stroke();
     });
 
-    others.forEach((entry) => {
+    labels.forEach((entry) => {
       ctx.beginPath();
       ctx.fillStyle = palette.dot;
       ctx.arc(entry.x, entry.y, 2.7 * entry.scale, 0, Math.PI * 2);
@@ -217,31 +267,45 @@ if (stage && payload) {
     ctx.fill();
 
     ctx.shadowBlur = 0;
-    others.forEach((entry) => {
-      ctx.fillStyle = palette.text;
-      const baseSize = window.innerWidth < 768 ? 12 : 16;
-      const bonusSize = Math.min(entry.node.count * (window.innerWidth < 768 ? 0.72 : 0.95), window.innerWidth < 768 ? 3 : 5);
-      const nameSize = Math.round(baseSize * entry.scale + bonusSize);
-      const supSize = Math.max(10, Math.round(nameSize * 0.58));
-      const baselineY = entry.y + 5;
-      ctx.font = `400 ${nameSize}px ${fontFamily}`;
-      ctx.textAlign = entry.x >= 0 ? "left" : "right";
-      const offset = entry.x >= 0 ? 10 : -10;
-      const labelX = entry.x + offset;
-      ctx.fillText(entry.node.id, labelX, baselineY);
-
+    labels.forEach((entry) => {
+      const supSize = Math.max(8, Math.round(entry.nameSize * 0.62));
+      ctx.font = `400 ${entry.nameSize}px ${fontFamily}`;
       const nameWidth = ctx.measureText(entry.node.id).width;
       ctx.font = `400 ${supSize}px ${fontFamily}`;
+      const countWidth = ctx.measureText(String(entry.node.count)).width;
+      const outerPadding = isCompact ? 7 : 12;
+      const naturalX = entry.x + (entry.side === "right" ? 9 : -9);
+      const labelX = entry.side === "right"
+        ? Math.min(naturalX, state.width / 2 - nameWidth - countWidth - outerPadding)
+        : Math.max(naturalX, -state.width / 2 + nameWidth + countWidth + outerPadding);
+
+      if (Math.abs(entry.labelY - entry.targetY) > 3) {
+        ctx.strokeStyle = palette.edge;
+        ctx.lineWidth = 0.6;
+        ctx.beginPath();
+        ctx.moveTo(entry.x, entry.y);
+        ctx.lineTo(labelX + (entry.side === "right" ? -3 : 3), entry.labelY - 3);
+        ctx.stroke();
+      }
+
+      ctx.fillStyle = palette.text;
+      ctx.font = `400 ${entry.nameSize}px ${fontFamily}`;
+      ctx.textAlign = entry.side === "right" ? "left" : "right";
+      ctx.fillText(entry.node.id, labelX, entry.labelY);
+
+      ctx.font = `400 ${supSize}px ${fontFamily}`;
       ctx.fillStyle = palette.edgeText;
-      if (entry.x >= 0) {
-        ctx.fillText(String(entry.node.count), labelX + nameWidth + 2, baselineY - nameSize * 0.45);
+      if (entry.side === "right") {
+        ctx.textAlign = "left";
+        ctx.fillText(String(entry.node.count), labelX + nameWidth + 2, entry.labelY - entry.nameSize * 0.45);
       } else {
-        ctx.fillText(String(entry.node.count), labelX - nameWidth - 2, baselineY - nameSize * 0.45);
+        ctx.textAlign = "right";
+        ctx.fillText(String(entry.node.count), labelX - nameWidth - 2, entry.labelY - entry.nameSize * 0.45);
       }
     });
 
     ctx.fillStyle = palette.center;
-    ctx.font = `400 ${window.innerWidth < 768 ? 15 : 20}px ${fontFamily}`;
+    ctx.font = `400 ${window.innerWidth < 768 ? 14 : 20}px ${fontFamily}`;
     ctx.textAlign = "center";
     ctx.shadowColor = palette.shadow;
     ctx.shadowBlur = 10;
