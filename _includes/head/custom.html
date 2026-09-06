@@ -12,6 +12,33 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="{{ base_path }}/images/favicon.ico"/>
-<meta name="theme-color" content="#ffffff"/>
+<meta name="theme-color" content="#fafafc"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<script>
+  (function () {
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    const statusBarStyle = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+
+    const syncBrowserChrome = function () {
+      const storedTheme = localStorage.getItem("theme");
+      const darkMode = document.documentElement.getAttribute("data-theme") === "dark" ||
+        (!document.documentElement.hasAttribute("data-theme") &&
+          (storedTheme === "dark" ||
+            (storedTheme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)));
+
+      themeColor.setAttribute("content", darkMode ? "#161617" : "#fafafc");
+      statusBarStyle.setAttribute("content", darkMode ? "black-translucent" : "default");
+    };
+
+    syncBrowserChrome();
+
+    new MutationObserver(syncBrowserChrome).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncBrowserChrome);
+  })();
+</script>
 
 <!-- end custom head snippets -->
