@@ -40,6 +40,14 @@ redirect_from:
   </div>
   <div class="timeline-list">
     <article class="timeline-item">
+      <span class="timeline-date">2026 Aug</span>
+      <p><strong>ELBO-TDS</strong> was accepted to <strong>CIKM 2026</strong> as an Oral paper.</p>
+    </article>
+    <article class="timeline-item">
+      <span class="timeline-date">2026 Jun</span>
+      <p><strong>OnePiece</strong> and <strong>ManCAR</strong> were accepted to <strong>KDD 2026</strong>.</p>
+    </article>
+    <article class="timeline-item">
       <span class="timeline-date">2026 Feb</span>
       <p>Released two new arXiv preprints: <strong>ReSID</strong> (<a href="https://arxiv.org/abs/2602.02338">arXiv:2602.02338</a>) and <strong>ManCAR</strong> (<a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>).</p>
     </article>
@@ -70,7 +78,7 @@ redirect_from:
     <article class="pub-card pub-card--featured">
       <span class="pub-year-badge">2026</span>
       <h3>ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation</h3>
-      <p>CoRR abs/2602.20093</p>
+      <p>KDD 2026</p>
       <div class="pub-links-inline">
         <a href="https://arxiv.org/abs/2602.20093">arXiv:2602.20093</a>
       </div>
@@ -97,18 +105,18 @@ redirect_from:
     </article>
 
     <article class="pub-card">
-      <span class="pub-year-badge">2025</span>
+      <span class="pub-year-badge">2026</span>
       <h3>OnePiece: Bringing Context Engineering and Reasoning to Industrial Cascade Ranking System</h3>
-      <p>CoRR abs/2509.18091</p>
+      <p>KDD 2026</p>
       <div class="pub-links-inline">
         <a href="https://arxiv.org/abs/2509.18091">arXiv:2509.18091</a>
       </div>
     </article>
 
     <article class="pub-card">
-      <span class="pub-year-badge">2025</span>
+      <span class="pub-year-badge">2026</span>
       <h3>A Probabilistic Framework for Temporal Distribution Generalization in Industry-Scale Recommender Systems</h3>
-      <p>CoRR abs/2511.21032</p>
+      <p>CIKM 2026 (Oral)</p>
       <div class="pub-links-inline">
         <a href="https://arxiv.org/abs/2511.21032">arXiv:2511.21032</a>
       </div>
